@@ -173,6 +173,11 @@ pl:
       pending: Oczekuje na przegląd
       perform_full_suspension: Zawieś
       previous_strikes: Poprzednie ostrzeżenia
+      previous_strikes_description_html:
+        few: To konto ma <strong>%{count}</strong> ostrzeżenia.
+        many: To konto ma <strong>%{count}</strong> ostrzeżeń.
+        one: To konto ma <strong>jedno</strong> ostrzeżenie.
+        other: To konto ma <strong>%{count}</strong> ostrzeżeń.
       promote: Podnieś uprawnienia
       protocol: Protokół
       public: Publiczne
@@ -465,6 +470,11 @@ pl:
       view: Zobacz blokadę domeny
     email_domain_blocks:
       add_new: Dodaj nową
+      attempts_over_week:
+        few: "%{count} próby w ciągu ostatniego tygodnia"
+        many: "%{count} prób w ciągu ostatniego tygodnia"
+        one: "%{count} próba w ciągu ostatniego tygodnia"
+        other: "%{count} prób w ciągu ostatniego tygodnia"
       created_msg: Pomyślnie utworzono blokadę domeny e-mail
       delete: Usuń
       dns:
@@ -490,6 +500,11 @@ pl:
     instances:
       availability:
         failure_threshold_reached: Próg niepowodzenia osiągnięty dnia %{date}.
+        failures_recorded:
+          few: Nieudane próby w %{count} różnych dniach.
+          many: Nieudane próby w %{count} różnych dniach.
+          one: Nieudane próby %{count} dnia.
+          other: Nieudane próby w %{count} różnych dniach.
         no_failures_recorded: Brak błędów w rejestrze.
         title: Dostępność
         warning: Ostatnia próba połączenia z tym serwerem zakończyła się niepowodzeniem
@@ -521,6 +536,7 @@ pl:
       delivery:
         all: Wszystkie
         clear: Wyczyść błędy w doręczaniu
+        failing: Niepowodzenie
         restart: Uruchom ponownie doręczenie
         stop: Zatrzymaj doręczanie
         unavailable: Niedostępne
@@ -529,6 +545,11 @@ pl:
       delivery_error_hint: Jeżeli doręczanie nie będzie możliwe przez %{count} dni, zostanie automatycznie oznaczona jako nie do doręczania.
       destroyed_msg: Dane z %{domain} są teraz w kolejce do bezpośredniego usunięcia.
       empty: Nie znaleziono domen.
+      known_accounts:
+        few: "%{count} znane konta"
+        many: "%{count} znanych kont"
+        one: "%{count} znane konto"
+        other: "%{count} znane konta"
       moderation:
         all: Wszystkie
         limited: Ograniczone
@@ -801,6 +822,7 @@ pl:
         disallow_provider: Nie zezwalaj na wydawcę
         title: Popularne linki
         usage_comparison: Udostępnione %{today} razy dzisiaj, w porównaniu z %{yesterday} wczoraj
+      only_allowed: Tylko dozwolone
       pending_review: Oczekuje na przegląd
       preview_card_providers:
         allowed: Linki od tego wydawcy mogą podlegać trendom
@@ -835,7 +857,13 @@ pl:
         trending_rank: 'Popularne #%{rank}'
         usable: Może być użyty
         usage_comparison: Używane %{today} razy dzisiaj, w porównaniu z %{yesterday} wczoraj
+        used_by_over_week:
+          few: Użyte przez %{count} osoby w ciągu ostatniego tygodnia
+          many: Użyte przez %{count} osób w ciągu ostatniego tygodnia
+          one: Użyte przez jedną osobę w ciągu ostatniego tygodnia
+          other: Użyte przez %{count} osób w ciągu ostatniego tygodnia
       title: Na czasie
+      trending: Popularne
     warning_presets:
       add_new: Dodaj nowy
       delete: Usuń
@@ -1027,10 +1055,12 @@ pl:
       appealed_msg: Twoje odwołanie zostało złożone. Jeśli zostanie zatwierdzone, zostaniesz powiadomiony.
       appeals:
         submit: Zgłoś odwołanie
+      approve_appeal: Zatwierdź odwołanie
       associated_report: Powiązany raport
       created_at: Data
       description_html: Są to działania podjęte przeciwko Twojemu kontu i ostrzeżenia wysłane do ciebie przez administrację %{instance}.
       recipient: Adresowane do
+      reject_appeal: Odrzuć odwołanie
       status: 'Post #%{id}'
       status_removed: Post został już usunięty z systemu
       title: "%{action} z %{date}"
@@ -1235,6 +1265,11 @@ pl:
         many: "(%{count}) nowych osób Cię śledzi! Wspaniale!"
         one: Dodatkowo, w czasie nieobecności zaczęła śledzić Cię jedna osoba Gratulacje!
         other: Dodatkowo, zaczęło Cię śledzić %{count} nowych osób! Wspaniale!
+      subject:
+        few: "%{count} nowe powiadomienia od Twojej ostatniej wizyty 🐘"
+        many: "%{count} nowych powiadomień od Twojej ostatniej wizyty 🐘"
+        one: "1 nowe powiadomienie od Twojej ostatniej wizyty 🐘"
+        other: "%{count} nowych powiadomień od Twojej ostatniej wizyty 🐘"
       title: W trakcie Twojej nieobecności…
     favourite:
       body: 'Twój wpis został polubiony przez %{name}:'
@@ -1348,6 +1383,11 @@ pl:
   reports:
     errors:
       invalid_rules: nie odwołuje się do prawidłowych reguł
+  rss:
+    content_warning: 'Ostrzeżenie o zawartości:'
+    descriptions:
+      account: Publiczne posty od @%{acct}
+      tag: 'Publiczne wpisy oznaczone #%{hashtag}'
   scheduled_statuses:
     over_daily_limit: Przekroczyłeś(-aś) limit %{limit} zaplanowanych wpisów na ten dzień
     over_total_limit: Przekroczyłeś(-aś) limit %{limit} zaplanowanych wpisów
@@ -1518,6 +1558,9 @@ pl:
     pinned: Przypięty wpis
     reblogged: podbił
     sensitive_content: Wrażliwa zawartość
+  strikes:
+    errors:
+      too_late: Jest za późno na odwołanie się od tego ostrzeżenia
   tags:
     does_not_match_previous_name: nie pasuje do poprzedniej nazwy
   terms:

@@ -802,6 +802,7 @@ pt-PT:
           other: Partilhado por %{count} pessoas na última semana
         title: Links em destaque
         usage_comparison: Partilhado %{today} vezes hoje, em comparação com %{yesterday} ontem
+      only_allowed: Apenas permitidos
       pending_review: Pendente de revisão
       preview_card_providers:
         allowed: Links deste editor poderão ser incluídos nos destaques
@@ -843,6 +844,7 @@ pt-PT:
           one: Utilizada por uma pessoa na última semana
           other: Utilizada por %{count} pessoas na última semana
       title: Tendências
+      trending: Em destaque
     warning_presets:
       add_new: Adicionar novo
       delete: Eliminar
@@ -1034,10 +1036,12 @@ pt-PT:
       appealed_msg: O seu recurso foi submetido. Se ele for aprovado, será notificado.
       appeals:
         submit: Submeter recurso
+      approve_appeal: Aprovar recurso
       associated_report: Denúncia associada
       created_at: Data
       description_html: Estas são ações tomadas contra a sua conta e avisos que lhe foram enviados pela equipa de %{instance}.
       recipient: Endereçado a
+      reject_appeal: Rejeitar recurso
       status: 'Publicação #%{id}'
       status_removed: Publicação já eliminada do sistema
       title: "%{action} de %{date}"
@@ -1352,6 +1356,11 @@ pt-PT:
   reports:
     errors:
       invalid_rules: não faz referência a regras válidas
+  rss:
+    content_warning: 'Aviso de conteúdo:'
+    descriptions:
+      account: Publicações públicas de @%{acct}
+      tag: 'Publicações públicas marcadas com #%{hashtag}'
   scheduled_statuses:
     over_daily_limit: Excedeste o limite de %{limit} publicações agendadas para esse dia
     over_total_limit: Tu excedeste o limite de %{limit} publicações agendadas
@@ -1510,6 +1519,9 @@ pt-PT:
     pinned: Toot fixado
     reblogged: partilhado
     sensitive_content: Conteúdo sensível
+  strikes:
+    errors:
+      too_late: É tarde demais para apelar desta punição
   tags:
     does_not_match_previous_name: não coincide com o nome anterior
   terms:
@@ -1672,15 +1684,15 @@ pt-PT:
         silence: Conta limitada
         suspend: Conta suspensa
     welcome:
-      edit_profile_action: Configura o perfil
-      edit_profile_step: Podes personalizar o teu perfil carregando uma imagem de perfil e de cabeçalho ou alterando o nome a exibir, entre outras opções. Se preferires rever os novos seguidores antes deles te poderem seguir, podes tornar a tua conta privada.
-      explanation: Aqui estão algumas dicas para começares
-      final_action: Começa a publicar
-      final_step: 'Começa a publicar! Mesmo sem seguidores, as tuas mensagens públicas podem ser vistas por outros, por exemplo, na cronologia local e em hashtags. Tu podes querer apresentar-te na hashtag #introductions.'
-      full_handle: O teu nome completo
-      full_handle_hint: Isto é o que você diria aos seus amigos para que eles lhe possam enviar mensagens ou seguir a partir de outra instância.
+      edit_profile_action: Configurar o perfil
+      edit_profile_step: Pode personalizar o seu perfil carregando uma imagem de perfil e de cabeçalho ou alterando o nome a exibir, entre outras opções. Se preferir rever os novos seguidores antes de estes o poderem seguir, pode tornar a sua conta privada.
+      explanation: Aqui estão algumas dicas para começar
+      final_action: Começar a publicar
+      final_step: 'Começa a publicar! Mesmo sem seguidores, as suas mensagens públicas podem ser vistas por outros, por exemplo, na cronologia local e em hashtags. Pode querer apresentar-se utilizando a hashtag #introduções ou #introductions.'
+      full_handle: O seu nome completo
+      full_handle_hint: Isto é o que tem de facultar aos seus amigos para que eles lhe possam enviar mensagens ou seguir a partir de outra instância.
       review_preferences_action: Alterar preferências
-      review_preferences_step: Certifique-se de configurar as suas preferências, tais como os e-mails que gostaria de receber ou o nível de privacidade que deseja que as suas publicações tenham por defeito. Se não sofres de enjoo, podes ativar a opção de auto-iniciar GIFs.
+      review_preferences_step: Certifique-se de configurar as suas preferências, tais como os e-mails que gostaria de receber ou o nível de privacidade que deseja que as suas publicações tenham por defeito. Se não sofre de enjoo de movimento, pode ativar a opção de auto-iniciar GIFs.
       subject: Bem-vindo ao Mastodon
       tip_federated_timeline: A cronologia federativa é uma visão global da rede Mastodon. Mas só inclui pessoas que os teus vizinhos subscrevem, por isso não é uma visão completa.
       tip_following: Segues o(s) administrador(es) do teu servidor por defeito. Para encontrar mais pessoas interessantes, procura nas cronologias local e federada.

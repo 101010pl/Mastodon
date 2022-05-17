@@ -785,6 +785,7 @@ id:
           other: Dibagikan oleh %{count} orang selama seminggu terakhir
         title: Tautan sedang tren
         usage_comparison: Dibagikan %{today} kali hari ini, dibandingkan %{yesterday} kemarin
+      only_allowed: Yang diizinkan saja
       pending_review: Tinjauan tertunda
       preview_card_providers:
         allowed: Tautan dari penerbit ini dapat menjadi tren
@@ -824,6 +825,7 @@ id:
         used_by_over_week:
           other: Digunakan oleh %{count} orang selama seminggu terakhir
       title: Tren
+      trending: Sedang tren
     warning_presets:
       add_new: Tambah baru
       delete: Hapus
@@ -1015,10 +1017,12 @@ id:
       appealed_msg: Banding Anda sudah dikirim. Jika disetujui, Anda akan diberi tahu.
       appeals:
         submit: Ajukan banding
+      approve_appeal: Setujui banding
       associated_report: Laporan yang berkaitan
       created_at: Tanggal
       description_html: Ini adalah tindakan yang dilakukan terhadap akun Anda dan peringatan telah dikirim oleh staf %{instance}.
       recipient: Dialamatkan untuk
+      reject_appeal: Tolak banding
       status: 'Kiriman #%{id}'
       status_removed: Kirim sudah dihapus dari sistem
       title: "%{action} dari %{date}"
@@ -1329,6 +1333,11 @@ id:
   reports:
     errors:
       invalid_rules: tidak mereferensikan aturan yang valid
+  rss:
+    content_warning: 'Peringatan konten:'
+    descriptions:
+      account: Kiriman publik dari @%{acct}
+      tag: 'Kiriman publik ditagari #%{hashtag}'
   scheduled_statuses:
     over_daily_limit: Anda telah melampaui batas %{limit} toot terjadwal untuk sehari
     over_total_limit: Anda telah melampaui batas %{limit} toot terjadwal
@@ -1481,6 +1490,9 @@ id:
     pinned: Toot tersemat
     reblogged: di-boost-kan
     sensitive_content: Konten sensitif
+  strikes:
+    errors:
+      too_late: Terlambat untuk mengajukan banding hukuman ini
   tags:
     does_not_match_previous_name: tidak cocok dengan nama sebelumnya
   terms:

@@ -802,6 +802,7 @@ gl:
           other: Compartido por %{count} persoas na última semana
         title: Ligazóns en voga
         usage_comparison: Compartido %{today} veces hoxe, comparado con %{yesterday} onte
+      only_allowed: Só as permitidas
       pending_review: Revisión pendente
       preview_card_providers:
         allowed: As ligazóns desta orixe poden estar en voga
@@ -843,6 +844,7 @@ gl:
           one: Utilizado por unha persoa na última semana
           other: Utilizado por %{count} persoas na última semana
       title: Tendencias
+      trending: Tendencias
     warning_presets:
       add_new: Engadir novo
       delete: Eliminar
@@ -868,7 +870,7 @@ gl:
     new_report:
       body: "%{reporter} informou sobre %{target}"
       body_remote: Alguén desde %{domain} informou sobre %{target}
-      subject: Novo informe sobre %{instance} (#%{id})
+      subject: Nova denuncia sobre %{instance} (#%{id})
     new_trends:
       body: 'Os seguintes elementos precisan revisión antes de ser mostrados públicamente:'
       new_trending_links:
@@ -1034,10 +1036,12 @@ gl:
       appealed_msg: A túa apelación foi enviada. Se é aprobada recibirás unha notificación.
       appeals:
         submit: Enviar apelación
+      approve_appeal: Aprobar apelación
       associated_report: Denuncia asociada
       created_at: Data
       description_html: Estas son as accións tomadas contra a túa conta e os avisos que che enviou a administración de %{instance}.
       recipient: Entregada a
+      reject_appeal: Rexeitar apelación
       status: 'Publicación #%{id}'
       status_removed: A publicación xa foi eliminada do sistema
       title: "%{action} o %{date}"
@@ -1352,6 +1356,11 @@ gl:
   reports:
     errors:
       invalid_rules: non fai referencia a regras válidas
+  rss:
+    content_warning: 'Aviso sobre o contido:'
+    descriptions:
+      account: Publicacións públicas de @%{acct}
+      tag: 'Publicacións públicas con #%{hashtag}'
   scheduled_statuses:
     over_daily_limit: Excedeches o límite de %{limit} publicacións programadas para ese día
     over_total_limit: Excedeches o límite de %{limit} publicacións programadas
