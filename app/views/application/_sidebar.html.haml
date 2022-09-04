@@ -13,6 +13,4 @@
       %h4.emojify= t('footer.trending_now')
 
       - trends.each do |tag|
-        = react_component :hashtag, hashtag: ActiveModelSerializers::SerializableResource.new(tag, serializer: REST::TagSerializer).as_json
-
-%script{:src => " //www.comperialead.pl/getpulabanner.php?b=70134&c=js&p=68840&ref=rnYjgn", :type => "text/javascript"}
+        = react_component :hashtag, hashtag: ActiveModelSerializers::SerializableResource.new(tag, serializer: REST::TagSerializer, scope: current_user, scope_name: :current_user).as_json
