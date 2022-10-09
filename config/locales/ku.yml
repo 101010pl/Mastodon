@@ -1,45 +1,27 @@
 ---
 ku:
   about:
-    about_hashtag_html: Ev şandiyeke gelemperî ye bi <strong>#%{hashtag}</strong> re nîşankirî ye. Tu dikarî pê re çalak bibî heke ajimêreke te heye li ser fediverse.
     about_mastodon_html: 'Tora civakî ya pêşerojê: Ne reklam, ne çavdêriya pargîdanî, sêwirana exlaqî, û desentralîzasyon! Bi Mastodon re bibe xwediyê daneyên xwe!'
     about_this: Derbar
-    active_count_after: çalak
-    active_footnote: Mehane bikarhênerên çalak (MBÇ)
     administered_by: 'Tê bi rêvebirin ji aliyê:'
     api: API
     apps: Sepana mobîl
-    apps_platforms: Mastodon ji iOS, Android û platformên din bi kar bîne
-    browse_directory: Li riya profîlê bigere û li gorî berjewendiyan parzûn bike
-    browse_local_posts: Ji vî rajekarê weşaneke zindî ya şandiyên giştî bigere
-    browse_public_posts: Weşaneke zindî ya şandiyên giştî bigere li ser Mastodon
     contact: Têkilî
     contact_missing: Nehate sazkirin
     contact_unavailable: N/A
-    continue_to_web: Bo malpera sepanê bidomîne
-    discover_users: Bikarhêneran keşf bike
     documentation: Pelbend
-    federation_hint_html: Bi ajimêrê xwe %{instance} re tu dikarî kesên ji her kîjan rajekarê mastodonê bişopînî.
-    get_apps: Sepaneke mobîl bicerbîne
     hosted_on: Mastodon li ser %{domain} tê pêşkêşkirin
     instance_actor_flash: 'Ev ajimêr şanogereke aşopî ye ji bo rajekar were naskirin tê bikaranîn ne ajimêra kesî ye. Ji bo armanca giştî dixebite û divê neye astengkirin heya ku te xwest hemû mînakan asteng bikî, di vir de ku tu navpereke astengiyê bi kar bînî.
 
       '
-    learn_more: Bêtir fêr bibe
-    logged_in_as_html: Tu niha wekî %{username} têketî ye.
-    logout_before_registering: Jixwe te berê têketin kiriye.
-    privacy_policy: Polîtikaya nihêniyê
+    privacy_policy: Politîka taybetiyê
     rules: Rêbazên rajekar
     rules_html: 'Heger tu bixwazî ajimêrekî li ser rajekarê mastodon vebikî, li jêrê de kurtasî ya qaîdeyên ku tu guh bidî heye:'
-    see_whats_happening: Binêre ka çi diqewime
-    server_stats: 'Statîstîkên rajekar:'
     source_code: Çavkaniya Kodî
     status_count_after:
       one: şandî
       other: şandî
     status_count_before: Hatin weşan
-    tagline: Tora civakî ya nenavendî
-    terms: Peyama mercan
     unavailable_content: Rajekarên li hev kirî
     unavailable_content_description:
       domain: Rajekar
@@ -235,17 +217,21 @@ ku:
         approve_user: Bikarhêner bipejirîne
         assigned_to_self_report: Ragihandinê diyar bike
         change_email_user: E-nameya bikarhêner biguherîne
+        change_role_user: Rola bikarhêner biguherîne
         confirm_user: Bikarhêner bipejirîne
         create_account_warning: Hişyariyekê çê bike
         create_announcement: Daxûyaniyekê çê bike
+        create_canonical_email_block: Astengkirina e-nameyê biafirîne
         create_custom_emoji: Emojiyên kesanekirî çê bike
         create_domain_allow: Navpera ku destûr standiye peyda bike
         create_domain_block: Navpera ku asteng bûye ava bike
         create_email_domain_block: Navpera e-name yê de asteng kirinê peyda bike
         create_ip_block: Rêziknameya IPyê saz bike
         create_unavailable_domain: Navpera ku nayê bikaranîn pêk bîne
+        create_user_role: Rolê biafirîne
         demote_user: Bikarhênerê kaşê jêr bike
         destroy_announcement: Daxûyanîyê jê bibe
+        destroy_canonical_email_block: Astengkirina e-nameyê jê bibe
         destroy_custom_emoji: Emojîya kesanekirî jê bibe
         destroy_domain_allow: Navperên mafdayî jê bibe
         destroy_domain_block: Navperên astengkirî jê bibe
@@ -254,6 +240,7 @@ ku:
         destroy_ip_block: Tomara IPyê jêbibe
         destroy_status: Şandiyê jê bibe
         destroy_unavailable_domain: Navperên tuneyî jê bibe
+        destroy_user_role: Rolê hilweşîne
         disable_2fa_user: 2FA neçalak bike
         disable_custom_emoji: Emojîya kesanekirî neçalak bike
         disable_sign_in_token_auth_user: Ji bo bikarhênerê piştrastkirina navnîşana e-name yê ya token neçalak bike
@@ -280,24 +267,30 @@ ku:
         update_announcement: Daxûyaniyê rojane bike
         update_custom_emoji: Emojîya kesanekirî rojane bike
         update_domain_block: Navperên astengkirî rojane bike
+        update_ip_block: Rolê IP rojane bike
         update_status: Şandiyê rojane bike
+        update_user_role: Rolê rojane bike
       actions:
         approve_appeal_html: "%{name} îtiraza biryara çavdêriyê ji %{target} pejirand"
         approve_user_html: "%{name} tomarkirina ji %{target} pejirand"
         assigned_to_self_report_html: "%{name} ji xwe re ragihandinek %{target} hilda"
         change_email_user_html: "%{name} navnîşana e-nameya bikarhêner %{target} guherand"
+        change_role_user_html: "%{name} rolê %{target} guhert"
         confirm_user_html: "%{name} navnîşana e-nameya bikarhêner %{target} piştrast kir"
         create_account_warning_html: "%{name} ji bo %{target} hişyariyek şand"
         create_announcement_html: "%{name} agahdarkirineke nû çêkir %{target}"
+        create_canonical_email_block_html: "%{name} bi riya dabeşkirinê e-nameya %{target} asteng kir"
         create_custom_emoji_html: "%{name} emojîyeke nû ya %{target} bar kir"
         create_domain_allow_html: "%{name} bi navperê %{target} re maf da demnameya giştî"
         create_domain_block_html: "%{name} navpera %{target} asteng kir"
         create_email_domain_block_html: "%{name} e-nameya navperê %{target} asteng kir"
         create_ip_block_html: "%{name} ji bo IPya %{target} rêzikname saz kir"
         create_unavailable_domain_html: "%{name} bi navperê %{target} re gihandinê rawestand"
+        create_user_role_html: "%{name} rola %{target} afirand"
         demote_user_html: "%{name} bikarhênerê %{target} kaşê jêr kir"
         destroy_announcement_html: "%{name} daxûyaniyeke %{target} jê bir"
-        destroy_custom_emoji_html: "%{name} emojiya %{target} tune kir"
+        destroy_canonical_email_block_html: "%{name} bi riya dabeşkirinê astengiya li ser e-nameya %{target} rakir"
+        destroy_custom_emoji_html: "%{name} emojiya %{target} jê bir"
         destroy_domain_allow_html: "%{name} bi navperê %{target} re maf neda demnameya giştî"
         destroy_domain_block_html: "%{name} navpera %{target} asteng kir"
         destroy_email_domain_block_html: "%{name} astengiya li ser navpera e-nameyê %{target} rakir"
@@ -305,6 +298,7 @@ ku:
         destroy_ip_block_html: "%{name}, ji bo IPya %{target} rêziknameyê jêbir"
         destroy_status_html: "%{name} ji alîyê %{target} ve şandiyê rakir"
         destroy_unavailable_domain_html: "%{name} bi navperê %{target} re gihandinê berdewam kir"
+        destroy_user_role_html: "%{name} rola %{target} jê bir"
         disable_2fa_user_html: "%{name} ji bo bikarhênerê %{target} du faktorî neçalak kir"
         disable_custom_emoji_html: "%{name} emojiya %{target} neçalak kir"
         disable_sign_in_token_auth_user_html: "%{name} ji bo %{target} nîşana mafdayîna e-nameya ne çalak kir"
@@ -331,8 +325,9 @@ ku:
         update_announcement_html: "%{name} daxûyaniya %{target} rojane kir"
         update_custom_emoji_html: "%{name} emojiya %{target} rojane kir"
         update_domain_block_html: "%{name} ji bo navpera %{target} astengkirin rojane kir"
+        update_ip_block_html: "%{name} rolê %{target} guhert ji bo IP"
         update_status_html: "%{name} şandiya bikarhêner %{target} rojane kir"
-      deleted_status: "(şandiyeke jêbirî)"
+        update_user_role_html: "%{name} rola %{target} guherand"
       empty: Tomarkirin nehate dîtin.
       filter_by_action: Li gorî çalakiyê biparzinîne
       filter_by_user: Li gorî bikarhênerê biparzinîne
@@ -761,9 +756,6 @@ ku:
         closed_message:
           desc_html: Gava ku tomarkirin têne girtin li ser rûpelê pêşîn têne xuyang kirin. Tu dikarî nîşanên HTML-ê bi kar bîne
           title: Tomarkirinê girtî ya peyaman
-        deletion:
-          desc_html: Maf bide ku herkes bikaribe ajimêrê te jê bibe
-          title: Jê birina ajimêrê vekek
         require_invite_text:
           desc_html: Gava ku tomarkirin pêdiviya pejirandina destan dike, Têketina nivîsê "Tu çima dixwazî beşdar bibî?" Bibe sereke ji devla vebijêrkî be
           title: Ji bo bikarhênerên nû divê ku sedemek tevlêbûnê binivîsinin
@@ -773,9 +765,6 @@ ku:
           none: Kesek nikare tomar bibe
           open: Herkes dikare tomar bibe
         title: Awayê tomarkirinê
-      show_known_fediverse_at_about_page:
-        desc_html: Dema ku neçalak be, demnameya gerdûnî ya ku ji rûpela zeviyê ve hatî girêdan tenê bi nîşandana naveroka herêmî tên sînorkirin
-        title: Li ser rûpela demnameya ne naskirî naveroka giştî nîşan bide
       site_description:
         desc_html: Paragrafa destpêkê li ser API. Dide nasîn ka çi ev rajekarê Mastodon taybet dike û tiştên din ên girîn. Tu dikarî hashtagên HTML-ê, bi kar bîne di <code>&lt;a&gt;</code> û <code>&lt;em&gt;</code> de.
         title: Danasîna rajekar
@@ -786,8 +775,8 @@ ku:
         desc_html: Ew di alavdanka kêlekê û tagên meta de tên xuyakirin. Di yek paragrafê de rave bike ka Mastodon çi ye û ya ku ev rajekar taybetî dike.
         title: Danasîna rajekarê kurt
       site_terms:
-        desc_html: Tu dikarî polîtika nihêniyê xwe, mercên karûbar an nameyên din binvisîne. Tu dikarî nîşanên HTML-ê bi kar bîne
-        title: Mercên bikaranîn a kesanekirî
+        desc_html: Tu dikarî politîkaya taybetiyê ya xwe binivîsînî. Tu dikarî tagên HTML bi kar bînî
+        title: Politîka taybetiyê ya kesane
       site_title: Navê rajekar
       thumbnail:
         desc_html: Ji bo pêşdîtinên bi riya OpenGraph û API-yê têne bikaranîn. 1200x630px tê pêşniyar kirin
@@ -797,8 +786,8 @@ ku:
         title: Mafê bide gihîştina ne naskirî bo demnameya gelemperî
       title: Sazkariyên malperê
       trendable_by_default:
-        desc_html: Hashtagên ku berê hatibûn qedexekirin bandor dike
-        title: Bihêle ku hashtag bêyî nirxandinek pêşîn bibe rojev
+        desc_html: Naveroka rojevê nîşankirî dikare were qedexekirin
+        title: Mafê bide rojevê bêyî ku were nirxandin
       trends:
         desc_html: Hashtagên ku berê hatibûn nirxandin ên ku niha rojev in bi gelemperî bide xuyakirin
         title: Hashtagên rojevê
@@ -998,10 +987,8 @@ ku:
     warning: Bi van daneyan re pir baldar be. Tu caran bi kesî re parve neke!
     your_token: Nîşana gihîştina te
   auth:
-    apply_for_account: Daxwaza vexwendinekê bike
+    apply_for_account: Li ser lîsteya bendemayînê bistîne
     change_password: Borînpeyv
-    checkbox_agreement_html: Ez <a href="%{rules_path}" target="_blank">rêbazên rajeker</a> û <a href="%{terms_path}" target="_blank">hêmanên karûbaran</a> dipejirînim
-    checkbox_agreement_without_rules_html: Ez <a href="%{terms_path}" target="_blank">hêmanên karûbaran</a> rêbazên rajeker dipejirînim
     delete_account: Ajimêr jê bibe
     delete_account_html: Heke tu dixwazî ajimêra xwe jê bibe, tu dikarî <a href="%{path}">li vir bidomîne</a>. Ji te tê xwestin ku were pejirandin.
     description:
@@ -1020,6 +1007,7 @@ ku:
     migrate_account: Derbasî ajimêreke din bibe
     migrate_account_html: Heke tu dixwazî ev ajimêr li ajimêreke cuda beralî bikî, tu dikarî <a href="%{path}">ji vir de saz bike</a>.
     or_log_in_with: An têketinê bike bi riya
+    privacy_policy_agreement_html: Min <a href="%{privacy_policy_path}" target="_blank">Politîka taybetiyê</a> xwend û dipejirînim
     providers:
       cas: CAS
       saml: SAML
@@ -1027,12 +1015,18 @@ ku:
     registration_closed: "%{instance} endamên nû napejirîne"
     resend_confirmation: Rêwerên pejirandinê ji nû ve bişîne
     reset_password: Borînpeyvê ji nû ve saz bike
+    rules:
+      preamble: Ev rêzik ji aliyê çavdêrên %{domain} ve tên sazkirin.
+      title: Hinek rêzikên bingehîn.
     security: Ewlehî
     set_new_password: Borînpeyveke nû ji nû ve saz bike
     setup:
       email_below_hint_html: Heke navnîşana e-nameya jêrîn ne rast be, tu dikarî wê li vir biguherîne û e-nameyeke pejirandinê ya nû bistîne.
       email_settings_hint_html: E-nameya pejirandinê ji %{email} re hate şandin. Heke ew navnîşana e-nameyê ne rast be, tu dikarî wê di sazkariyên ajimêr de biguherîne.
       title: Damezirandin
+    sign_up:
+      preamble: Bi ajimêrekê li ser vê rajekarê Mastodon re, tu yê karîbî her keseke din li ser torê bişopînî, her ku ajimêrê wan li ku derê tê pêşkêşkirin.
+      title: Ka em te bi rê bixin li ser %{domain}.
     status:
       account_status: Rewşa ajimêr
       confirming: Li benda pejirandina e-nameyê ne da ku biqede.
@@ -1041,7 +1035,6 @@ ku:
       redirecting_to: Ajimêra te neçalak e ji ber ku niha ber bi %{acct} ve tê beralîkirin.
       view_strikes: Binpêkirinên berê yên dijî ajimêrê xwe bibîne
     too_fast: Form pir zû hat şandin, dîsa biceribîne.
-    trouble_logging_in: Têketina te de pirsgirêk çêdibe?
     use_security_key: Kilîteke ewlehiyê bi kar bîne
   authorize_follow:
     already_following: Jixwe tu vê ajimêrê dişopînî
@@ -1099,10 +1092,6 @@ ku:
       more_details_html: Bo bêhtir zanyarî, <a href="%{terms_path}">polîtika nihêniyê</a> binêre.
       username_available: Navê bikarhêneriyê te wê dîsa peyda bibe
       username_unavailable: Navê bikarhêneriyê ye wê tuneyî bimîne
-  directories:
-    directory: Rêgeha profîlê
-    explanation: Bikarhêneran li gorî berjewendiyên wan bibîne
-    explore_mastodon: Vekole %{title}
   disputes:
     strikes:
       action_taken: Çalakî hatin kirin
@@ -1183,6 +1172,8 @@ ku:
     edit:
       add_keyword: Kilîtpeyv tevî bike
       keywords: Peyvkilît
+      statuses: Şandiyên kesane
+      statuses_hint_html: Ev parzûn ji bo hibijartina şandiyên kesane tê sepandin bêyî ku ew bi peyvkilîtên jêrîn re lihevhatî bin. <a href="%{path}">Şandiyan binirxîne an jî ji parzûnê rake</a>.
       title: Parzûnê serrast bike
     errors:
       deprecated_api_multiple_keywords: Van parameteran ji vê sepanê nayên guhertin ji ber ku ew li ser bêtirî yek kilîtpeyvên parzûnkirî têne sepandin. Sepaneke nûtir an navrûya bikarhêneriyê ya malperê bi kar bîne.
@@ -1196,10 +1187,23 @@ ku:
       keywords:
         one: "%{count} kilîtpeyv"
         other: "%{count} kilîtpeyv"
+      statuses:
+        one: "%{count} şandî"
+        other: "%{count} şandî"
+      statuses_long:
+        one: "%{count} şandiyê kesane yê veşartî"
+        other: "%{count} şandiyê kesane yê veşartî"
       title: Parzûn
     new:
       save: Parzûna nû tomar bike
       title: Parzûnek nû li zêde bike
+    statuses:
+      back_to_filter: Vegere bo parzûnê
+      batch:
+        remove: Ji parzûnê rake
+      index:
+        hint: Ev parzûn bêyî pîvanên din ji bo hilbijartina şandiyên kesane tê sepandin. Tu dikarî ji navrûya tevnê bêtir şandiyan tevlî vê parzûnê bikî.
+        title: Şandiyên parzûnkirî
   footer:
     developers: Pêşdebir
     more: Bêtir…
@@ -1207,12 +1211,22 @@ ku:
     trending_now: Niha rojevê de
   generic:
     all: Hemû
+    all_items_on_page_selected_html:
+      one: Berhemê <strong>%{count}</strong> li ser vê rûpelê hatiye hilbijartin.
+      other: Hemû berhemên <strong>%{count}</strong> li ser vê rûpelê hatine hilbijartin.
+    all_matching_items_selected_html:
+      one: Berhemê <strong>%{count}</strong> ku bi lêgerîna te re lihevhatî ye hatiye hilbijartin.
+      other: Hemû berhemên <strong>%{count}</strong> ku bi lêgerîna te re lihevhatî ne hatine hilbijartin.
     changes_saved_msg: Guhertin bi serkeftî tomar bû!
     copy: Jê bigire
     delete: Jê bibe
+    deselect: Hemûyan hilnebijêre
     none: Ne yek
     order_by: Rêz bike bi
     save_changes: Guhertinan tomar bike
+    select_all_matching_items:
+      one: Berhemê %{count} ku bi lêgerîna te re lihevhatî ye hilbijêre.
+      other: Hemû berhemên %{count} ku bi lêgerîna te re lihevhatî ne hilbijêre.
     today: îro
     validation_errors:
       one: Tiştek hîn ne rast e! Ji kerema xwe çewtiya li jêr di ber çavan re derbas bike
@@ -1321,17 +1335,6 @@ ku:
         subject: "%{name} ragihandinek şand"
       sign_up:
         subject: "%{name} tomar bû"
-    digest:
-      action: Hemû agahdariyan nîşan bide
-      body: Li vir kurteyeke peyamên ku li te derbasbûnd ji serdana te ya dawîn di %{since} de
-      mention: "%{name} behsa te kir:"
-      new_followers_summary:
-        one: Herwiha, dema tu dûr bûyî te şopînerek nû bi dest xist! Bijî!
-        other: Herwiha, dema tu dûr bûyî te %{count} şopînerek nû bi dest xist! Bijî!
-      subject:
-        one: "1 agahdarî ji serdana te ya herî dawî 🐘"
-        other: "%{count} agahdarî ji serdana te ya herî dawî 🐘"
-      title: Di tunebûna te de...
     favourite:
       body: 'Şandiya te hate bijartin ji alî %{name} ve:'
       subject: "%{name} şandiya te hez kir"
@@ -1612,89 +1615,6 @@ ku:
       too_late: Pir dereng e ji bo îtîrazê li ser vê binpêkirinê
   tags:
     does_not_match_previous_name: bi navê berê re li hev nayê
-  terms:
-    body_html: |
-      <h2>Politîka taybetiyê</h2>
-      <h3 id="collect">Em çi zanyarî kom dikin?</h3>
-
-      <ul>
-        <li><em>Zanyariyên asayî</em>: Ku tu xwe li ser vê rajekarê tomar bikî, Wê ji te xwestin ku e-name û borînpeyvekê têxî. Her wiha dibe ku tu zanyariyên vebijêrkî têxî wekî zanyariyên profîlê profile mînak: Navê xuyangê û jiyanname, wêneya profîlê û wêneya jormalperê bar bikî. Navê bikarhêneriyê, navê xuyangê, jiyanname, wêneya profîlê û wêneya jormalperêher dem bi giştî tên nîşandan.</li>
-        <li><em>Şandî, şopandin û zanyariyên giştî yên din</em>: Kesên ku tu wan dişopînî bi giştî tê nîşandan, heman tişt bo şopîneran e. Dema tu peyamekê dişînî, dane û dem tên tomarkirin wekî sepanê. Messages may contain media attachments, such as pictures and videos. Public and unlisted posts are available publicly. When you feature a post on your profile, that is also publicly available information. Your posts are delivered to your followers, in some cases it means they are delivered to different servers and copies are stored there. When you delete posts, this is likewise delivered to your followers. The action of reblogging or favouriting another post is always public.</li>
-        <li><em>Direct and followers-only posts</em>: All posts are stored and processed on the server. Followers-only posts are delivered to your followers and users who are mentioned in them, and direct posts are delivered only to users mentioned in them. In some cases it means they are delivered to different servers and copies are stored there. We make a good faith effort to limit the access to those posts only to authorized persons, but other servers may fail to do so. Therefore it's important to review servers your followers belong to. You may toggle an option to approve and reject new followers manually in the settings. <em>Please keep in mind that the operators of the server and any receiving server may view such messages</em>, and that recipients may screenshot, copy or otherwise re-share them. <em>Do not share any sensitive information over Mastodon.</em></li>
-        <li><em>IPs and other metadata</em>: When you log in, we record the IP address you log in from, as well as the name of your browser application. All the logged in sessions are available for your review and revocation in the settings. The latest IP address used is stored for up to 12 months. We also may retain server logs which include the IP address of every request to our server.</li>
-      </ul>
-
-      <hr class="spacer" />
-
-      <h3 id="use">What do we use your information for?</h3>
-
-      <p>Any of the information we collect from you may be used in the following ways:</p>
-
-      <ul>
-        <li>To provide the core functionality of Mastodon. You can only interact with other people's content and post your own content when you are logged in. For example, you may follow other people to view their combined posts in your own personalized home timeline.</li>
-        <li>To aid moderation of the community, for example comparing your IP address with other known ones to determine ban evasion or other violations.</li>
-        <li>The email address you provide may be used to send you information, notifications about other people interacting with your content or sending you messages, and to respond to inquiries, and/or other requests or questions.</li>
-      </ul>
-
-      <hr class="spacer" />
-
-      <h3 id="protect">How do we protect your information?</h3>
-
-      <p>We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access your personal information. Among other things, your browser session, as well as the traffic between your applications and the API, are secured with SSL, and your password is hashed using a strong one-way algorithm. You may enable two-factor authentication to further secure access to your account.</p>
-
-      <hr class="spacer" />
-
-      <h3 id="data-retention">What is our data retention policy?</h3>
-
-      <p>We will make a good faith effort to:</p>
-
-      <ul>
-        <li>Retain server logs containing the IP address of all requests to this server, in so far as such logs are kept, no more than 90 days.</li>
-        <li>Retain the IP addresses associated with registered users no more than 12 months.</li>
-      </ul>
-
-      <p>You can request and download an archive of your content, including your posts, media attachments, profile picture, and header image.</p>
-
-      <p>You may irreversibly delete your account at any time.</p>
-
-      <hr class="spacer"/>
-
-      <h3 id="cookies">Do we use cookies?</h3>
-
-      <p>Yes. Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow). These cookies enable the site to recognize your browser and, if you have a registered account, associate it with your registered account.</p>
-
-      <p>We use cookies to understand and save your preferences for future visits.</p>
-
-      <hr class="spacer" />
-
-      <h3 id="disclose">Do we disclose any information to outside parties?</h3>
-
-      <p>We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our site, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others rights, property, or safety.</p>
-
-      <p>Your public content may be downloaded by other servers in the network. Your public and followers-only posts are delivered to the servers where your followers reside, and direct messages are delivered to the servers of the recipients, in so far as those followers or recipients reside on a different server than this.</p>
-
-      <p>When you authorize an application to use your account, depending on the scope of permissions you approve, it may access your public profile information, your following list, your followers, your lists, all your posts, and your favourites. Applications can never access your e-mail address or password.</p>
-
-      <hr class="spacer" />
-
-      <h3 id="children">Site usage by children</h3>
-
-      <p>If this server is in the EU or the EEA: Our site, products and services are all directed to people who are at least 16 years old. If you are under the age of 16, per the requirements of the GDPR (<a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">General Data Protection Regulation</a>) do not use this site.</p>
-
-      <p>If this server is in the USA: Our site, products and services are all directed to people who are at least 13 years old. If you are under the age of 13, per the requirements of COPPA (<a href="https://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act">Children's Online Privacy Protection Act</a>) do not use this site.</p>
-
-      <p>Law requirements can be different if this server is in another jurisdiction.</p>
-
-      <hr class="spacer" />
-
-      <h3 id="changes">Changes to our Privacy Policy</h3>
-
-      <p>If we decide to change our privacy policy, we will post those changes on this page.</p>
-
-      <p>This document is CC-BY-SA. It was last updated May 26, 2022.</p>
-
-      <p>Originally adapted from the <a href="https://github.com/discourse/discourse">Discourse privacy policy</a>.</p>
-    title: "%{instance} mercên bikaranîn û politîkayên nehêniyê"
   themes:
     contrast: Mastodon (Dijberiya bilind)
     default: Mastodon (Tarî)
@@ -1773,20 +1693,13 @@ ku:
         suspend: Ajimêr hatiye rawestandin
     welcome:
       edit_profile_action: Profîlê saz bike
-      edit_profile_step: Tu dikarî profîla xwe bi barkirina wêne, sernav, guherandina navê xuyangê xwe û bêhtir ve xweş bikî. Heke tu dixwazî şagirtên nû binirxînî berî ku mafê bidî ku ew te bişopînê, tu dikarî ajimêra xwe kilît bike.
+      edit_profile_step: Tu dikarî bi barkirina wêneyek profîlê, guhertina navê xwe ya xuyangê û bêtir profîla xwe kesane bikî. Berî ku mafê bidî ku te şopînerên nû te bişopînin, tu dikarî binirxînî.
       explanation: Li vir çend serişte hene ku tu dest pê bike
       final_action: Dest bi weşandinê bike
       final_step: 'Dest bi weşandinê bike! Bêyî şopîneran jî dibe ku şandiyên te yên gelemperî ji hêla kesên din ve werin dîtin, mînakî li ser demjimêra herêmî û di hashtagan de. Dibe ku tu bixwazî xwe li ser hashtagê #nasname bidî nasandin.'
       full_handle: Hemî destikê te
       full_handle_hint: Ji hevalên xwe re, ji bona ji rajekarekê din peyam bişîne an jî ji bona ku te bikaribe bişopîne tişta ku tu bibêjî ev e.
-      review_preferences_action: Bijartinan biguherîne
-      review_preferences_step: Pê bawer be ku vebijêrkên xwe saz bikî, wek mînak kîjan e-nameyên ku tu dixwaziî wergirîne, an tu dixwazî weşanên te ji kîjan astê nehêniyê de kesanekirî bin. Heke nexweşiya te ya tevgerê tune be, tu dikarî hilbijêrî ku GIF ya xweser çalak bibe.
       subject: Tu bi xêr hatî Mastodon
-      tip_federated_timeline: Demnameya giştî dimenêke gelemperî a Mastodon e. Lê tenê kesên ku ciranên te endamên wê ne dihewîne, ji ber vê yekê ew hemû nîne.
-      tip_following: Tu rêvebir (ên) rajeker wek berdest dişopînî. Ji bo mirovên balkêştir bibînî, demnameya herêmî û giştî kontrol bike.
-      tip_local_timeline: Demnameya herêmî, dimenêke bi giştî ye li ser %{instance} e. Ev ciranên te yên herî nêzik in!
-      tip_mobile_webapp: Ger geroka te ya desta pêşkêşî te bike ku tu Mastodon li ser ekrana xwe ya malê lê zêde bikî, tu dikarî agahdariyên push bistînî. Ew bi gelek awayan mîna serîlêdanek xwemalî tevdigere!
-      tips: Serbend
       title: Bi xêr hatî, %{name}!
   users:
     follow_limit_reached: Tu nikarî zêdetirî %{limit} kesan bişopînî

@@ -1,38 +1,21 @@
 ---
 he:
   about:
-    about_hashtag_html: אלו הודעות פומביות המתוייגות בתור<strong>#%{hashtag}</strong>. ניתן להגיב, להדהד או לחבב אותם אם יש לך חשבון בכל מקום שהוא בפדרציה.
     about_mastodon_html: מסטודון היא רשת חברתית <em>חופשית, מבוססת תוכנה חופשית ("קוד פתוח")</em>. כאלטרנטיבה <em>בלתי ריכוזית</em> לפלטפרומות המסחריות, מסטודון מאפשרת להמנע מהסיכונים הנלווים להפקדת התקשורת שלך בידי חברה יחידה. שמת את מבטחך בשרת אחד &mdash; לא משנה במי בחרת, תמיד אפשר לדבר עם כל שאר המשתמשים. לכל מי שרוצה יש את האפשרות להקים שרת מסטודון עצמאי, ולהשתתף ב<em>רשת החברתית</em> באופן חלק.
     about_this: אודות שרת זה
-    active_count_after: פעיל
-    active_footnote: משתמשים פעילים חודשית (MAU)
     administered_by: 'מנוהל ע"י:'
     api: ממשק
     apps: יישומונים לנייד
-    apps_platforms: שימוש במסטודון מ-iOS, אנדרואיד ופלטפורמות אחרות
-    browse_directory: עיון בספריית פרופילים וסינון לפי תחומי עניין
-    browse_local_posts: עיון בפיד חי של חצרוצים פומביים בשרת זה
-    browse_public_posts: עיון בפיד חי של חצרוצים פומביים בשרת זה
     contact: יצירת קשר
     contact_missing: ללא הגדרה
     contact_unavailable: לא רלוונטי/חסר
-    continue_to_web: להמשיך לאפליקציית ווב
-    discover_users: גילוי משתמשים
     documentation: תיעוד
-    federation_hint_html: עם חשבון ב-%{instance} ניתן לעקוב אחרי אנשים בכל שרת מסטודון ומעבר.
-    get_apps: נסה/י יישומון לנייד
     hosted_on: מסטודון שיושב בכתובת %{domain}
     instance_actor_flash: |
       חשבון זה הינו פועל וירטואלי המשמש לייצוג השרת עצמו ולא משתמש ספציפי.
       הוא משמש למטרת פדרציה ואין לחסום אותו אלא למטרת חסימת המופע כולו, ובמקרה כזה עדיף להשתמש בחסימת מופע.
-    learn_more: מידע נוסף
-    logged_in_as_html: הנך מחובר/ת כרגע כ-%{username}.
-    logout_before_registering: חשבון זה כבר מחובר.
-    privacy_policy: מדיניות פרטיות
     rules: כללי השרת
     rules_html: 'להלן סיכום הכללים שעליך לעקוב אחריהם על מנת להשתמש בחשבון בשרת מסטודון זה:'
-    see_whats_happening: מה קורה כעת
-    server_stats: 'סטטיסטיקות שרת:'
     source_code: קוד מקור
     status_count_after:
       many: פוסטים
@@ -40,8 +23,6 @@ he:
       other: פוסטים
       two: פוסטים
     status_count_before: שכתבו
-    tagline: רשת חברתית מבוזרת
-    terms: תנאי שימוש
     unavailable_content: שרתים מוגבלים
     unavailable_content_description:
       domain: שרת
@@ -245,6 +226,7 @@ he:
         approve_user: אישור משתמש
         assigned_to_self_report: הקצאת דו"ח
         change_email_user: שינוי כתובת דוא"ל למשתמש
+        change_role_user: שינוי תפקיד למשתמש
         confirm_user: אשר משתמש
         create_account_warning: יצירת אזהרה
         create_announcement: יצירת הכרזה
@@ -254,6 +236,7 @@ he:
         create_email_domain_block: יצירת חסימת דומיין דוא"ל
         create_ip_block: יצירת כלל IP
         create_unavailable_domain: יצירת דומיין בלתי זמין
+        create_user_role: יצירת תפקיד
         demote_user: הורדת משתמש בדרגה
         destroy_announcement: מחיקת הכרזה
         destroy_custom_emoji: מחיקת אמוג'י יחודי
@@ -264,6 +247,7 @@ he:
         destroy_ip_block: מחיקת כלל IP
         destroy_status: מחיקת פוסט
         destroy_unavailable_domain: מחיקת דומיין בלתי זמין
+        destroy_user_role: מחיקת תפקיד
         disable_2fa_user: השעיית זיהוי דו-גורמי
         disable_custom_emoji: השעיית אמוג'י מיוחד
         disable_sign_in_token_auth_user: השעיית אסימון הזדהות בדוא"ל של משתמש
@@ -291,11 +275,13 @@ he:
         update_custom_emoji: עדכון סמלון מותאם אישית
         update_domain_block: עדכון חסימת שם מתחם
         update_status: סטטוס עדכון
+        update_user_role: עדכון תפקיד
       actions:
         approve_appeal_html: "%{name} אישר/ה ערעור על החלטת מנהלי הקהילה מ-%{target}"
         approve_user_html: "%{name} אישר/ה הרשמה מ-%{target}"
         assigned_to_self_report_html: '%{name} הקצה/תה דו"ח %{target} לעצמם'
         change_email_user_html: '%{name} שינה/תה את כתובת הדוא"ל של המשתמש %{target}'
+        change_role_user_html: "%{name} שינה את התפקיד של %{target}"
         confirm_user_html: '%{name} אישר/ה את כותבת הדו"אל של המשתמש %{target}'
         create_account_warning_html: "%{name} שלח/ה אזהרה ל %{target}"
         create_announcement_html: "%{name} יצר/ה הכרזה חדשה %{target}"
@@ -305,9 +291,10 @@ he:
         create_email_domain_block_html: '%{name} חסם/ה את דומיין הדוא"ל %{target}'
         create_ip_block_html: "%{name} יצר/ה כלל עבור IP %{target}"
         create_unavailable_domain_html: "%{name} הפסיק/ה משלוח לדומיין %{target}"
+        create_user_role_html: "%{name} יצר את התפקיד של %{target}"
         demote_user_html: "%{name} הוריד/ה בדרגה את המשתמש %{target}"
         destroy_announcement_html: "%{name} מחק/ה את ההכרזה %{target}"
-        destroy_custom_emoji_html: "%{name} השמיד/ה את האמוג'י %{target}"
+        destroy_custom_emoji_html: "%{name} מחק אמוג'י של %{target}"
         destroy_domain_allow_html: "%{name} לא התיר/ה פדרציה עם הדומיין %{target}"
         destroy_domain_block_html: "%{name} הסיר/ה חסימה מהדומיין %{target}"
         destroy_email_domain_block_html: '%{name} הסיר/ה חסימה מדומיין הדוא"ל %{target}'
@@ -315,6 +302,7 @@ he:
         destroy_ip_block_html: "%{name} מחק/ה את הכלל עבור IP %{target}"
         destroy_status_html: "%{name} הסיר/ה פוסט מאת %{target}"
         destroy_unavailable_domain_html: "%{name} התחיל/ה מחדש משלוח לדומיין %{target}"
+        destroy_user_role_html: "%{name} ביטל את התפקיד של %{target}"
         disable_2fa_user_html: "%{name} ביטל/ה את הדרישה לאימות דו-גורמי למשתמש %{target}"
         disable_custom_emoji_html: "%{name} השבית/ה את האמוג'י %{target}"
         disable_sign_in_token_auth_user_html: '%{name} השבית/ה את האימות בעזרת אסימון דוא"ל עבור %{target}'
@@ -342,7 +330,7 @@ he:
         update_custom_emoji_html: "%{name} עדכן/ה אמוג'י %{target}"
         update_domain_block_html: "%{name} עדכן/ה חסימת דומיין עבור %{target}"
         update_status_html: "%{name} עדכן/ה פוסט של %{target}"
-      deleted_status: "(פוסט נמחק)"
+        update_user_role_html: "%{name} שינה את התפקיד של %{target}"
       empty: לא נמצאו יומנים.
       filter_by_action: סינון לפי פעולה
       filter_by_user: סינון לפי משתמש
@@ -791,9 +779,6 @@ he:
         closed_message:
           desc_html: מוצג על הדף הראשי כאשר ההרשמות סגורות. ניתן להשתמש בתגיות HTML
           title: מסר סגירת הרשמות
-        deletion:
-          desc_html: הרשאה לכולם למחוק את חשבונם
-          title: פתיחת מחיקת חשבון
         require_invite_text:
           desc_html: כאשר הרשמות דורשות אישור ידני, הפיכת טקסט ה"מדוע את/ה רוצה להצטרף" להכרחי במקום אופציונלי
           title: אלץ משתמשים חדשים למלא סיבת הצטרפות
@@ -803,9 +788,6 @@ he:
           none: אף אחד לא יכול להרשם
           open: כל אחד יכול להרשם
         title: מצב הרשמות
-      show_known_fediverse_at_about_page:
-        desc_html: כאשר לא מופעל, מגביל את הפיד הפומבי המקושר מדף הנחיתה להצגת תוכן מקומי בלבד
-        title: הכללת תוכן פדרטיבי בדף הפיד הפומבי הבלתי מאומת
       site_description:
         desc_html: מוצג כפסקה על הדף הראשי ומשמש כתגית מטא. ניתן להשתמש בתגיות HTML, ובמיוחד ב־<code> &lt; a&gt; </code> ו־<code> &lt; em&gt; </code> .
         title: תיאור האתר
@@ -815,9 +797,6 @@ he:
       site_short_description:
         desc_html: מוצג בעמודה הצידית ובמטא תגים. מתאר מהו מסטודון ומה מיחד שרת זה בפסקה בודדת.
         title: תאור שרת קצר
-      site_terms:
-        desc_html: ניתן לכתוב מדיניות פרטיות, תנאי שירות ושאר מסמכים חוקיים בעצמך. ניתן להשתמש בתגי HTML
-        title: תנאי שירות יחודיים
       site_title: כותרת האתר
       thumbnail:
         desc_html: משמש לתצוגה מקדימה דרך OpenGraph והממשק. מומלץ 1200x630px
@@ -826,9 +805,6 @@ he:
         desc_html: הצגת קישורית לפיד הפומבי מדף הנחיתה והרשאה לממשק לגשת לפיד הפומבי ללא אימות
         title: הרשאת גישה בלתי מאומתת לפיד הפומבי
       title: הגדרות אתר
-      trendable_by_default:
-        desc_html: משפיע על האשתגיות שלא נאסרו קודם לכן
-        title: הרשאה להאשתגיות להופיע בנושאים החמים ללא אישור מוקדם
       trends:
         desc_html: הצגה פומבית של תוכן שנסקר בעבר ומופיע כרגע בנושאים החמים
         title: נושאים חמים
@@ -1035,10 +1011,7 @@ he:
     warning: זהירות רבה נדרשת עם מידע זה. אין לחלוק אותו אף פעם עם אף אחד!
     your_token: אסימון הגישה שלך
   auth:
-    apply_for_account: בקשת הזמנה
     change_password: סיסמה
-    checkbox_agreement_html: אני מסכים/ה ל<a href="%{rules_path}" target="_blank">כללי השרת</a> ול<a href="%{terms_path}" target="_blank">תנאי השימוש</a>
-    checkbox_agreement_without_rules_html: אני מסכים/ה ל<a href="%{terms_path}" target="_blank">תנאי השימוש</a>
     delete_account: מחיקת חשבון
     delete_account_html: אם ברצונך למחוק את החשבון, ניתן <a href="%{path}">להמשיך כאן</a>. תתבקש/י לספק אישור נוסף.
     description:
@@ -1078,7 +1051,6 @@ he:
       redirecting_to: חשבונכם לא פעיל כעת מכיוון שמפנה ל%{acct}.
       view_strikes: צפיה בעברות קודמות שנרשמו נגד חשבונך
     too_fast: הטופס הוגש מהר מדי, נסה/י שוב.
-    trouble_logging_in: בעיה להתחבר לאתר?
     use_security_key: שימוש במפתח אבטחה
   authorize_follow:
     already_following: את/ה כבר עוקב/ת אחרי חשבון זה
@@ -1136,10 +1108,6 @@ he:
       more_details_html: לפרטים נוספים, ראו את <a href="%{terms_path}">מדיניות הפרטיות</a>.
       username_available: שם המשתמש שלך שוב יהיה זמין
       username_unavailable: שם המשתמש שלך יישאר בלתי זמין
-  directories:
-    directory: מדריך פרופילים
-    explanation: גלו משתמשים בהתבסס על תחומי העניין שלהם
-    explore_mastodon: חקור את %{title}
   disputes:
     strikes:
       action_taken: הפעולה שבוצעה
@@ -1220,6 +1188,7 @@ he:
     edit:
       add_keyword: הוספת מילת מפתח
       keywords: מילות מפתח
+      statuses: פוסטים יחידים
       title: ערוך מסנן
     errors:
       deprecated_api_multiple_keywords: לא ניתן לשנות פרמטרים אלו מהיישומון הזה בגלל שהם חלים על יותר ממילת מפתח אחת. ניתן להשתמש ביישומון מעודכן יותר או בממשק הוובי.
@@ -1239,6 +1208,13 @@ he:
     new:
       save: שמירת מסנן חדש
       title: הוספת מסנן חדש
+    statuses:
+      back_to_filter: חזרה לפילטר
+      batch:
+        remove: הסרה מפילטר
+      index:
+        hint: פילטר זה חל באופן של בחירת פוסטים בודדים ללא תלות בקריטריונים אחרים. תוכלו להוסיף עוד פוסטים לפילטר זה ממשק הווב.
+        title: פוסטים שסוננו
   footer:
     developers: מפתחות
     more: עוד…
@@ -1249,6 +1225,7 @@ he:
     changes_saved_msg: השינויים נשמרו בהצלחה!
     copy: להעתיק
     delete: למחוק
+    deselect: בטל בחירה של הכל
     none: כלום
     order_by: מיין לפי
     save_changes: שמור שינויים
@@ -1364,21 +1341,6 @@ he:
         subject: '%{name} שלח/ה דו"ח'
       sign_up:
         subject: "%{name} נרשמו"
-    digest:
-      action: הצגת כל ההתראות
-      body: להלן סיכום זריז של הדברים שקרו על מאז ביקורך האחרון ב-%{since}
-      mention: "%{name} פנה אליך ב:"
-      new_followers_summary:
-        many: חוץ מזה, נוספו לך %{count} עוקבים חדשים בזמן שלא היית! מדהים!
-        one: חוץ מזה, נוסף לך עוקב חדש בזמן שלא היית! הידד!
-        other: חוץ מזה, נוספו לך %{count} עוקבים חדשים בזמן שלא היית! מדהים!
-        two: חוץ מזה, נוספו לך %{count} עוקבים חדשים בזמן שלא היית! מדהים!
-      subject:
-        many: "%{count} התראות חדשות מאז ביקורך האחרון 🐘"
-        one: "התראה חדשה אחת מאז ביקורך האחרון 🐘"
-        other: "%{count} התראות חדשות מאז ביקורך האחרון 🐘"
-        two: "%{count} התראות חדשות מאז ביקורך האחרון 🐘"
-      title: בהעדרך...
     favourite:
       body: 'חצרוצך חובב על ידי %{name}:'
       subject: חצרוצך חובב על ידי %{name}
@@ -1671,89 +1633,6 @@ he:
       too_late: מאוחר מדי להגיש ערעור
   tags:
     does_not_match_previous_name: לא תואם את השם האחרון
-  terms:
-    body_html: |
-      <h2>מדיניות פרטיות</h2>
-      <h3 id="collect">איזה מידע אנחנו אוספים ?</h3>
-
-      <ul>
-        <li><em>מידע חשבון בסיסי</em>: If you register on this server, you may be asked to enter a username, an e-mail address and a password. You may also enter additional profile information such as a display name and biography, and upload a profile picture and header image. The username, display name, biography, profile picture and header image are always listed publicly.</li>
-        <li><em>Posts, following and other public information</em>: The list of people you follow is listed publicly, the same is true for your followers. When you submit a message, the date and time is stored as well as the application you submitted the message from. Messages may contain media attachments, such as pictures and videos. Public and unlisted posts are available publicly. When you feature a post on your profile, that is also publicly available information. Your posts are delivered to your followers, in some cases it means they are delivered to different servers and copies are stored there. When you delete posts, this is likewise delivered to your followers. The action of reblogging or favouriting another post is always public.</li>
-        <li><em>Direct and followers-only posts</em>: All posts are stored and processed on the server. Followers-only posts are delivered to your followers and users who are mentioned in them, and direct posts are delivered only to users mentioned in them. In some cases it means they are delivered to different servers and copies are stored there. We make a good faith effort to limit the access to those posts only to authorized persons, but other servers may fail to do so. Therefore it's important to review servers your followers belong to. You may toggle an option to approve and reject new followers manually in the settings. <em>Please keep in mind that the operators of the server and any receiving server may view such messages</em>, and that recipients may screenshot, copy or otherwise re-share them. <em>Do not share any sensitive information over Mastodon.</em></li>
-        <li><em>IPs and other metadata</em>: When you log in, we record the IP address you log in from, as well as the name of your browser application. All the logged in sessions are available for your review and revocation in the settings. The latest IP address used is stored for up to 12 months. We also may retain server logs which include the IP address of every request to our server.</li>
-      </ul>
-
-      <hr class="spacer" />
-
-      <h3 id="use">What do we use your information for?</h3>
-
-      <p>Any of the information we collect from you may be used in the following ways:</p>
-
-      <ul>
-        <li>To provide the core functionality of Mastodon. You can only interact with other people's content and post your own content when you are logged in. For example, you may follow other people to view their combined posts in your own personalized home timeline.</li>
-        <li>To aid moderation of the community, for example comparing your IP address with other known ones to determine ban evasion or other violations.</li>
-        <li>The email address you provide may be used to send you information, notifications about other people interacting with your content or sending you messages, and to respond to inquiries, and/or other requests or questions.</li>
-      </ul>
-
-      <hr class="spacer" />
-
-      <h3 id="protect">How do we protect your information?</h3>
-
-      <p>We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access your personal information. Among other things, your browser session, as well as the traffic between your applications and the API, are secured with SSL, and your password is hashed using a strong one-way algorithm. You may enable two-factor authentication to further secure access to your account.</p>
-
-      <hr class="spacer" />
-
-      <h3 id="data-retention">What is our data retention policy?</h3>
-
-      <p>We will make a good faith effort to:</p>
-
-      <ul>
-        <li>Retain server logs containing the IP address of all requests to this server, in so far as such logs are kept, no more than 90 days.</li>
-        <li>Retain the IP addresses associated with registered users no more than 12 months.</li>
-      </ul>
-
-      <p>You can request and download an archive of your content, including your posts, media attachments, profile picture, and header image.</p>
-
-      <p>You may irreversibly delete your account at any time.</p>
-
-      <hr class="spacer"/>
-
-      <h3 id="cookies">Do we use cookies?</h3>
-
-      <p>Yes. Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow). These cookies enable the site to recognize your browser and, if you have a registered account, associate it with your registered account.</p>
-
-      <p>We use cookies to understand and save your preferences for future visits.</p>
-
-      <hr class="spacer" />
-
-      <h3 id="disclose">Do we disclose any information to outside parties?</h3>
-
-      <p>We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our site, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others rights, property, or safety.</p>
-
-      <p>Your public content may be downloaded by other servers in the network. Your public and followers-only posts are delivered to the servers where your followers reside, and direct messages are delivered to the servers of the recipients, in so far as those followers or recipients reside on a different server than this.</p>
-
-      <p>When you authorize an application to use your account, depending on the scope of permissions you approve, it may access your public profile information, your following list, your followers, your lists, all your posts, and your favourites. Applications can never access your e-mail address or password.</p>
-
-      <hr class="spacer" />
-
-      <h3 id="children">Site usage by children</h3>
-
-      <p>If this server is in the EU or the EEA: Our site, products and services are all directed to people who are at least 16 years old. If you are under the age of 16, per the requirements of the GDPR (<a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">General Data Protection Regulation</a>) do not use this site.</p>
-
-      <p>If this server is in the USA: Our site, products and services are all directed to people who are at least 13 years old. If you are under the age of 13, per the requirements of COPPA (<a href="https://en.wikipedia.org/wiki/Children%27s_Online_Privacy_Protection_Act">Children's Online Privacy Protection Act</a>) do not use this site.</p>
-
-      <p>Law requirements can be different if this server is in another jurisdiction.</p>
-
-      <hr class="spacer" />
-
-      <h3 id="changes">Changes to our Privacy Policy</h3>
-
-      <p>If we decide to change our privacy policy, we will post those changes on this page.</p>
-
-      <p>This document is CC-BY-SA. It was last updated May 26, 2022.</p>
-
-      <p>Originally adapted from the <a href="https://github.com/discourse/discourse">Discourse privacy policy</a>.</p>
-    title: תנאי שימוש ומדיניות פרטיות ב-%{instance}
   themes:
     contrast: מסטודון (ניגודיות גבוהה)
     default: מסטודון (כהה)
@@ -1832,20 +1711,11 @@ he:
         suspend: חשבון מושעה
     welcome:
       edit_profile_action: הגדרת פרופיל
-      edit_profile_step: תוכל.י להתאים אישית את הפרויל באמצעות העלאת יצגן (אוואטר), כותרת, שינוי כינוי ועוד. אם תרצה.י לסקור את עוקביך/ייך החדשים לפני שתרשה.י להם לעקוב אחריך/ייך, תוכל.י לנעול את החשבון לשם כך.
       explanation: הנה כמה טיפים לעזור לך להתחיל
       final_action: התחל/ילי לחצרץ
-      final_step: 'התחל/ילי לחצרץ ! אפילו ללא עוקבים ייתכן שהחצרוצים הפומביים של יצפו ע"י אחרים, למשל בציר הזמן המקומי או בתגי הקבצה (האשטגים). כדאי להציג את עצמך תחת התג #introductions או #היוש'
       full_handle: שם המשתמש המלא שלך
       full_handle_hint: זה מה שתאמר.י לחברייך כדי שיוכלו לשלוח לך הודעה או לעקוב אחרייך ממופע אחר.
-      review_preferences_action: שנה הגדרות
-      review_preferences_step: וודא לקבוע את העדפותייך, למשל איזה הודעות דוא"ל תרצה/י לקבל, או איזו רמת פרטיות תרצה כברירת מחדל לחצרוצים שלך. אם אין לך בעיה עם זה, תוכל לאפשר הפעלה אוטומטית של הנפשות GIF
       subject: ברוכים הבאים למסטודון
-      tip_federated_timeline: ציר הזמן הפדרטיבי הוא מבט לכל הפדיברס, אך הוא כולל רק אנשים שחבריך למופע הספציפי שהתחברת אליו נרשמו אליו, כך שהוא לא שלם.
-      tip_following: את.ה כבר עוקב.ת אחר האדמין (מנהל השרת) כברירת מחדל. על מנת למצוא עוד אנשים מעניינים, בדוק את צירי הזמן המקומי והפדרטיבי.
-      tip_local_timeline: ציר הזמן המקומי מספק מבט לאנשים במופע זה (%{instance}). אלו הם שכנייך המידיים !
-      tip_mobile_webapp: אם דפדפן הנייד שלך מאפשר את הוספת מסטודון למסך הבית שלך, תוכל לקבל התראות בדחיפה (push). במובנים רבים אפשרות זאת מתנהגת כמו ישומון !
-      tips: טיפים
       title: ברוך/ה הבא/ה, %{name} !
   users:
     follow_limit_reached: לא תוכל לעקוב אחר יותר מ %{limit} אנשים
