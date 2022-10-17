@@ -54,7 +54,7 @@ import {
   About,
   PrivacyPolicy,
 } from './util/async-components';
-import { me } from '../../initial_state';
+import initialState, { me, owner, singleUserMode } from '../../initial_state';
 import { closeOnboarding, INTRODUCTION_VERSION } from 'mastodon/actions/onboarding';
 import Header from './components/header';
 
@@ -161,6 +161,8 @@ class SwitchingColumnsArea extends React.PureComponent {
       } else {
         redirect = <Redirect from='/' to='/getting-started' exact />;
       }
+    } else if (singleUserMode && owner && initialState?.accounts[owner]) {
+      redirect = <Redirect from='/' to={`/@${initialState.accounts[owner].username}`} exact />;
     } else {
       redirect = <Redirect from='/' to='/explore' exact />;
     }
@@ -193,6 +195,7 @@ class SwitchingColumnsArea extends React.PureComponent {
           <WrappedRoute path={['/publish', '/statuses/new']} component={Compose} content={children} />
 
           <WrappedRoute path={['/@:acct', '/accounts/:id']} exact component={AccountTimeline} content={children} />
+          <WrappedRoute path='/@:acct/tagged/:tagged?' exact component={AccountTimeline} content={children} />
           <WrappedRoute path={['/@:acct/with_replies', '/accounts/:id/with_replies']} component={AccountTimeline} content={children} componentParams={{ withReplies: true }} />
           <WrappedRoute path={['/@:acct/followers', '/accounts/:id/followers']} component={Followers} content={children} />
           <WrappedRoute path={['/@:acct/following', '/accounts/:id/following']} component={Following} content={children} />

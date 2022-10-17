@@ -2,41 +2,14 @@
 hu:
   about:
     about_mastodon_html: 'A jövő közösségi hálózata: Hirdetések és céges megfigyelés nélkül, etikus dizájnnal és decentralizációval! Legyél a saját adataid ura a Mastodonnal!'
-    about_this: Névjegy
-    administered_by: 'Adminisztrátor:'
     api: API
     apps: Mobil appok
-    contact: Kapcsolat
     contact_missing: Nincs megadva
     contact_unavailable: N/A
     documentation: Dokumentáció
     hosted_on: "%{domain} Mastodon szerver"
-    instance_actor_flash: |
-      Ez a fiók virtuális, magát a szervert reprezentálja, nem pedig konkrét
-      felhasználót. Föderációs célokra szolgál, nem szabad tehát felfüggeszteni, hacsak nem akarod a teljes szervert kitiltani, mely esetben a domain tiltásának használata javasolt.
     privacy_policy: Adatvédelmi szabályzat
-    rules: Szerverünk szabályai
-    rules_html: 'Alább látod azon követendő szabályok összefoglalóját, melyet be kell tartanod, ha szeretnél fiókot ezen a szerveren:'
     source_code: Forráskód
-    status_count_after:
-      one: bejegyzést írt
-      other: bejegyzést írt
-    status_count_before: Eddig
-    unavailable_content: Kimoderált szerverek
-    unavailable_content_description:
-      domain: Szerver
-      reason: 'Indok:'
-      rejecting_media: A szerverről származó médiafájlok nem kerülnek feldolgozásra, és nem jelennek meg miniatűrök, amelyek kézi átkattintást igényelnek a másik szerverre.
-      rejecting_media_title: Kiszűrt média
-      silenced: 'Az ezen szerverekről származó bejegyzéseket elrejtjük a nyilvános idővonalakról és beszélgetésekből, a rajtuk lévő felhasználók műveleteiről nem küldünk értesítéseket, hacsak nem követed őket:'
-      silenced_title: Elnémított szerverek
-      suspended: Nem fogsz tudni követni senkit ebből a szerverből, és nem kerül feldolgozásra vagy tárolásra a tőle származó adat, és nincs adatcsere.
-      suspended_title: Felfüggesztett szerverek
-    unavailable_content_html: A Mastodon általában mindenféle tartalomcserét és interakciót lehetővé tesz bármelyik szerverrel a fediverzumban. Ezek azok a kivételek, melyek a mi szerverünkön érvényben vannak.
-    user_count_after:
-      one: felhasználónk
-      other: felhasználónk
-    user_count_before: Összesen
     what_is_mastodon: Mi a Mastodon?
   accounts:
     choices_html: "%{name} választásai:"
@@ -737,9 +710,6 @@ hu:
         users: Bejelentkezett helyi felhasználóknak
       domain_blocks_rationale:
         title: Mutasd meg az indokolást
-      hero:
-        desc_html: A kezdőoldalon látszik. Legalább 600x100px méret javasolt. Ha nincs beállítva, a szerver bélyegképet használjuk
-        title: Hősi kép
       mascot:
         desc_html: Több oldalon is látszik. Legalább 293×205px méret javasolt. Ha nincs beállítva, az alapértelmezett kabalát használjuk
         title: Kabala kép
@@ -941,12 +911,8 @@ hu:
     new_trends:
       body: 'A következő elemeket ellenőrizni kell, mielőtt nyilvánosan megjelennének:'
       new_trending_links:
-        no_approved_links: Jelenleg nincsenek jóváhagyott felkapott hivatkozások.
-        requirements: 'Ezek közül bármelyik jelölt lehagyná a %{rank}. jóváhagyott felkapott hivatkozást, amely jelenleg a(z) „%{lowest_link_title}” ezzel a pontszámmal: %{lowest_link_score}.'
         title: Felkapott hivatkozások
       new_trending_statuses:
-        no_approved_statuses: Jelenleg nincsenek jóváhagyott felkapott bejegyzések.
-        requirements: 'Ezek közül bármelyik jelölt lehagyná a %{rank}. jóváhagyott felkapott bejegyzést, amely jelenleg a(z) „%{lowest_status_url}” ezzel a pontszámmal: %{lowest_status_score}.'
         title: Felkapott bejegyzések
       new_trending_tags:
         no_approved_tags: Jelenleg nincsenek jóváhagyott felkapott hashtagek.
@@ -1024,6 +990,9 @@ hu:
       email_below_hint_html: Ha az alábbi e-mail cím nem megfelelő, itt megváltoztathatod és kaphatsz egy új igazoló e-mailt.
       email_settings_hint_html: A visszaigazoló e-mailt elküldtük ide %{email}. Ha az e-mail cím nem megfelelő, megváltoztathatod a fiókod beállításainál.
       title: Beállítás
+    sign_up:
+      preamble: Egy fiókkal ezen a Mastodon kiszolgálón követhetsz bárkit a hálózaton, függetlenül attól, hogy az illető fiókja melyik kiszolgálón található.
+      title: Állítsuk be a fiókod a %{domain} kiszolgálón.
     status:
       account_status: Fiók állapota
       confirming: Várakozás az e-mailes visszaigazolásra.
@@ -1403,6 +1372,8 @@ hu:
     other: Egyéb
     posting_defaults: Bejegyzések alapértelmezései
     public_timelines: Nyilvános idővonalak
+  privacy_policy:
+    title: Adatvédelmi irányelvek
   reactions:
     errors:
       limit_reached: A különböző reakciók száma elérte a határértéket

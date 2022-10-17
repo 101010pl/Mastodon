@@ -2,41 +2,15 @@
 en:
   about:
     about_mastodon_html: 'The social network of the future: No ads, no corporate surveillance, ethical design, and decentralization! Own your data with Mastodon!'
-    about_this: About
-    administered_by: 'Administered by:'
     api: API
     apps: Mobile apps
-    contact: Contact
     contact_missing: Not set
     contact_unavailable: N/A
     documentation: Documentation
     hosted_on: Mastodon hosted on %{domain}
-    instance_actor_flash: |
-      This account is a virtual actor used to represent the server itself and not any individual user.
-      It is used for federation purposes and should not be blocked unless you want to block the whole instance, in which case you should use a domain block.
     privacy_policy: Privacy Policy
-    rules: Server rules
-    rules_html: 'Below is a summary of rules you need to follow if you want to have an account on this server of Mastodon:'
     source_code: Source code
-    status_count_after:
-      one: post
-      other: posts
-    status_count_before: Who published
-    unavailable_content: Moderated servers
-    unavailable_content_description:
-      domain: Server
-      reason: Reason
-      rejecting_media: 'Media files from these servers will not be processed or stored, and no thumbnails will be displayed, requiring manual click-through to the original file:'
-      rejecting_media_title: Filtered media
-      silenced: 'Posts from these servers will be hidden in public timelines and conversations, and no notifications will be generated from their users interactions, unless you are following them:'
-      silenced_title: Limited servers
-      suspended: 'No data from these servers will be processed, stored or exchanged, making any interaction or communication with users from these servers impossible:'
-      suspended_title: Suspended servers
-    unavailable_content_html: Mastodon generally allows you to view content from and interact with users from any other server in the fediverse. These are the exceptions that have been made on this particular server.
-    user_count_after:
-      one: user
-      other: users
-    user_count_before: Home to
+    title: About
     what_is_mastodon: What is Mastodon?
   accounts:
     choices_html: "%{name}'s choices:"
@@ -371,6 +345,7 @@ en:
       listed: Listed
       new:
         title: Add new custom emoji
+      no_emoji_selected: No emojis were changed as none were selected
       not_permitted: You are not permitted to perform this action
       overwrite: Overwrite
       shortcode: Shortcode
@@ -735,9 +710,6 @@ en:
         users: To logged-in local users
       domain_blocks_rationale:
         title: Show rationale
-      hero:
-        desc_html: Displayed on the frontpage. At least 600x100px recommended. When not set, falls back to server thumbnail
-        title: Hero image
       mascot:
         desc_html: Displayed on multiple pages. At least 293×205px recommended. When not set, falls back to default mascot
         title: Mascot image
@@ -842,6 +814,9 @@ en:
         description_html: These are links that are currently being shared a lot by accounts that your server sees posts from. It can help your users find out what's going on in the world. No links are displayed publicly until you approve the publisher. You can also allow or reject individual links.
         disallow: Disallow link
         disallow_provider: Disallow publisher
+        no_link_selected: No links were changed as none were selected
+        publishers:
+          no_publisher_selected: No publishers were changed as none were selected
         shared_by_over_week:
           one: Shared by one person over the last week
           other: Shared by %{count} people over the last week
@@ -861,6 +836,7 @@ en:
         description_html: These are posts that your server knows about that are currently being shared and favourited a lot at the moment. It can help your new and returning users to find more people to follow. No posts are displayed publicly until you approve the author, and the author allows their account to be suggested to others. You can also allow or reject individual posts.
         disallow: Disallow post
         disallow_account: Disallow author
+        no_status_selected: No trending posts were changed as none were selected
         not_discoverable: Author has not opted-in to being discoverable
         shared_by:
           one: Shared or favourited one time
@@ -876,6 +852,7 @@ en:
           tag_uses_measure: total uses
         description_html: These are hashtags that are currently appearing in a lot of posts that your server sees. It can help your users find out what people are talking the most about at the moment. No hashtags are displayed publicly until you approve them.
         listable: Can be suggested
+        no_tag_selected: No tags were changed as none were selected
         not_listable: Won't be suggested
         not_trendable: Won't appear under trends
         not_usable: Cannot be used
