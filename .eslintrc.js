@@ -4,9 +4,11 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:import/recommended',
     'plugin:promise/recommended',
+    'plugin:jsdoc/recommended',
   ],
 
   env: {
@@ -101,6 +103,7 @@ module.exports = {
       {
         vars: 'all',
         args: 'after-used',
+        destructuredArrayIgnorePattern: '^_',
         ignoreRestSiblings: true,
       },
     ],
@@ -207,6 +210,9 @@ module.exports = {
         ],
       },
     ],
+    'import/no-amd': 'error',
+    'import/no-commonjs': 'error',
+    'import/no-import-module-exports': 'error',
     'import/no-webpack-loader-syntax': 'error',
 
     'promise/always-return': 'off',
@@ -238,6 +244,14 @@ module.exports = {
     'formatjs/no-useless-message': 'error',
     'formatjs/prefer-formatted-message': 'error',
     'formatjs/prefer-pound-in-plural': 'error',
+
+    'jsdoc/check-types': 'off',
+    'jsdoc/no-undefined-types': 'off',
+    'jsdoc/require-jsdoc': 'off',
+    'jsdoc/require-param-description': 'off',
+    'jsdoc/require-property-description': 'off',
+    'jsdoc/require-returns-description': 'off',
+    'jsdoc/require-returns': 'off',
   },
 
   overrides: [
@@ -246,6 +260,7 @@ module.exports = {
         '*.config.js',
         '.*rc.js',
         'ide-helper.js',
+        'config/webpack/**/*',
       ],
 
       env: {
@@ -254,6 +269,10 @@ module.exports = {
 
       parserOptions: {
         sourceType: 'script',
+      },
+
+      rules: {
+        'import/no-commonjs': 'off',
       },
     },
     {
@@ -266,14 +285,24 @@ module.exports = {
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
         'plugin:jsx-a11y/recommended',
         'plugin:import/recommended',
         'plugin:import/typescript',
         'plugin:promise/recommended',
+        'plugin:jsdoc/recommended',
       ],
 
       rules: {
         '@typescript-eslint/no-explicit-any': 'off',
+
+        'jsdoc/require-jsdoc': 'off',
+
+        // Those rules set stricter rules for TS files
+        // to enforce better practices when converting from JS
+        'import/no-default-export': 'warn',
+        'react/prefer-stateless-function': 'warn',
+        'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
       },
     },
     {
@@ -284,6 +313,14 @@ module.exports = {
 
       env: {
         jest: true,
+      },
+    },
+    {
+      files: [
+        'streaming/**/*',
+      ],
+      rules: {
+        'import/no-commonjs': 'off',
       },
     },
   ],
