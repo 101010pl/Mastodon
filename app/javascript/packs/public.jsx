@@ -1,22 +1,25 @@
-import './public-path';
-import loadPolyfills from '../mastodon/load_polyfills';
-import { start } from '../mastodon/common';
+import { createRoot }  from 'react-dom/client';
 
-import escapeTextContentForBrowser from 'escape-html';
-import ready from '../mastodon/ready';
-import loadKeyboardExtensions from '../mastodon/load_keyboard_extensions';
-import 'cocoon-js-vanilla';
-import axios from 'axios';
-import { throttle } from 'lodash';
-import { defineMessages } from 'react-intl';
+import './public-path';
+
 import * as IntlMessageFormat  from 'intl-messageformat';
-import { timeAgoString }  from '../mastodon/components/relative_timestamp';
+import { defineMessages } from 'react-intl';
+
 import { delegate }  from '@rails/ujs';
-import * as emojify  from '../mastodon/features/emoji/emoji';
-import { getLocale }  from '../mastodon/locales';
-import React  from 'react';
-import ReactDOM  from 'react-dom';
+import axios from 'axios';
+import escapeTextContentForBrowser from 'escape-html';
 import { createBrowserHistory }  from 'history';
+import { throttle } from 'lodash';
+
+import { start } from '../mastodon/common';
+import { timeAgoString }  from '../mastodon/components/relative_timestamp';
+import emojify  from '../mastodon/features/emoji/emoji';
+import loadKeyboardExtensions from '../mastodon/load_keyboard_extensions';
+import { getLocale }  from '../mastodon/locales';
+import { loadPolyfills } from '../mastodon/polyfills';
+import ready from '../mastodon/ready';
+
+import 'cocoon-js-vanilla';
 
 start();
 
@@ -153,7 +156,8 @@ function loaded() {
 
           const content = document.createElement('div');
 
-          ReactDOM.render(<MediaContainer locale={locale} components={reactComponents} />, content);
+          const root = createRoot(content);
+          root.render(<MediaContainer locale={locale} components={reactComponents} />);
           document.body.appendChild(content);
           scrollToDetailedStatus();
         })
