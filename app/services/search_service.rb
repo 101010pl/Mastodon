@@ -4,12 +4,13 @@ class SearchService < BaseService
   SEARCH_ALL_PUBLIC_STATUSES = ENV['SEARCH_ALL_PUBLIC_STATUSES'] == 'true'
 
   def call(query, account, limit, options = {})
-    @query   = query&.strip
-    @account = account
-    @options = options
-    @limit   = limit.to_i
-    @offset  = options[:type].blank? ? 0 : options[:offset].to_i
-    @resolve = options[:resolve] || false
+    @query     = query&.strip
+    @account   = account
+    @options   = options
+    @limit     = limit.to_i
+    @offset    = options[:type].blank? ? 0 : options[:offset].to_i
+    @resolve   = options[:resolve] || false
+    @following = options[:following] || false
 
     default_results.tap do |results|
       next if @query.blank? || @limit.zero?
@@ -32,7 +33,9 @@ class SearchService < BaseService
       @account,
       limit: @limit,
       resolve: @resolve,
-      offset: @offset
+      offset: @offset,
+      use_searchable_text: true,
+      following: @following
     )
   end
 
@@ -76,7 +79,7 @@ class SearchService < BaseService
   end
 
   def url_query?
-    @resolve && /\Ahttps?:\/\//.match?(@query)
+    @resolve && %r{\Ahttps?://}.match?(@query)
   end
 
   def url_resource_results
