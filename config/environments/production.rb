@@ -45,7 +45,7 @@ Rails.application.configure do
   config.ssl_options = {
     hsts: { preload: true },
     redirect: {
-      exclude: ->request { request.path.start_with?('/health') || request.headers["Host"].end_with?('.onion') || request.headers["Host"].end_with?('.i2p') }
+      exclude: ->(request) { request.path.start_with?('/health') || request.headers["Host"].end_with?('.onion') || request.headers["Host"].end_with?('.i2p') }
     }
   }
 
