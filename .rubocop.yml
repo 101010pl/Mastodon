@@ -9,6 +9,7 @@ inherit_mode:
 require:
   - rubocop-rails
   - rubocop-rspec
+  - rubocop-rspec_rails
   - rubocop-performance
   - rubocop-capybara
   - ./lib/linter/rubocop_middle_dot
@@ -180,6 +181,11 @@ Style/FormatStringToken:
       - AllowedMethods # The rubocop-rails config adds `redirect`
   AllowedMethods:
     - redirect_with_vary
+
+# Reason: Prevailing style choice
+# https://docs.rubocop.org/rubocop/cops_style.html#stylehashaslastarrayitem
+Style/HashAsLastArrayItem:
+  Enabled: false
 
 # Reason: Enforce modern Ruby style
 # https://docs.rubocop.org/rubocop/cops_style.html#stylehashsyntax
