@@ -1114,7 +1114,6 @@ vi:
     migrate_account: Chuyển sang tài khoản khác
     migrate_account_html: Nếu bạn muốn bỏ tài khoản này để dùng một tài khoản khác, bạn có thể <a href="%{path}">thiết lập tại đây</a>.
     or_log_in_with: Hoặc đăng nhập bằng
-    privacy_policy_agreement_html: Tôi đã đọc và đồng ý <a href="%{privacy_policy_path}" target="_blank">chính sách bảo mật</a>
     progress:
       confirm: Xác nhận email
       details: Điền thông tin
@@ -1139,7 +1138,6 @@ vi:
     set_new_password: Đặt mật khẩu mới
     setup:
       email_below_hint_html: Kiểm tra hộp thư rác hoặc yêu cầu gửi lại. Bạn có thể sửa địa chỉ email của mình nếu sai.
-      email_settings_hint_html: Nhấn vào liên kết chúng tôi vừa gửi để xác minh %{email}. Nhanh nhé bạn.
       link_not_received: Không nhận được mã?
       new_confirmation_instructions_sent: Bạn sẽ nhận được một email mới với liên kết xác minh sau vài phút!
       title: Kiểm tra email của bạn
@@ -1148,7 +1146,6 @@ vi:
       title: Đăng nhập %{domain}
     sign_up:
       manual_review: "%{domain} sẽ duyệt đăng ký thủ công. Để giúp chúng tôi duyệt nhanh, hãy viết một chút về bản thân và lý do bạn muốn có một tài khoản trên %{domain}."
-      preamble: Với tài khoản trên máy chủ Mastodon này, bạn sẽ có thể theo dõi bất kỳ người nào thuộc các máy chủ khác.
       title: Đang đăng ký trên %{domain}.
     status:
       account_status: Trạng thái tài khoản
@@ -1638,7 +1635,7 @@ vi:
   scheduled_statuses:
     over_daily_limit: Bạn đã vượt qua giới hạn được lên lịch đăng tút %{limit} hôm nay
     over_total_limit: Bạn đã vượt quá giới hạn %{limit} của các tút được lên lịch
-    too_soon: Ngày lên lịch phải trong tương lai
+    too_soon: ngày phải ở tương lai
   self_destruct:
     lead_html: Rất tiếc, <strong>%{domain}</strong>đã đóng cửa vĩnh viễn. Nếu bạn có tài khoản ở đó, bạn sẽ không thể tiếp tục sử dụng tài khoản đó nhưng bạn vẫn có thể yêu cầu bản sao lưu dữ liệu của mình.
     title: Máy chủ đang đóng cửa
