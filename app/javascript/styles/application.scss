@@ -23,5 +23,8 @@
 @use 'mastodon/admin';
 @use 'mastodon/dashboard';
 @use 'mastodon/rtl';
+div.column {
+    flex-grow: 1;
+}
 @use 'mastodon/accessibility';
 @use 'mastodon/rich_text';
