@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe REST::CollectionSerializer do
+RSpec.describe REST::BaseCollectionSerializer do
   subject do
     serialized_record_json(collection, described_class, options: {
       scope: current_user,
@@ -27,7 +27,6 @@ RSpec.describe REST::CollectionSerializer do
   it 'includes the relevant attributes' do
     expect(subject)
       .to include(
-        'account' => an_instance_of(Hash),
         'id' => '2342',
         'name' => 'Exquisite follows',
         'description' => 'Always worth a follow',
