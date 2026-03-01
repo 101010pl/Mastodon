@@ -62,6 +62,12 @@ export function CollectionsEditor() {
   );
 }
 
+export function ShareCollectionModal() {
+  return import('../../collections/detail/share_modal').then(
+    module => ({default: module.CollectionShareModal})
+  );
+}
+
 export function Status () {
   return import('../../status');
 }
@@ -91,11 +97,6 @@ export function AccountGallery () {
 
 export function AccountFeatured() {
   return import('../../account_featured');
-}
-
-export function AccountAbout() {
-  return import('../../account_about')
-    .then((module) => ({ default: module.AccountAbout }));
 }
 
 export function AccountEdit() {
