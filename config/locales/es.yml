@@ -345,12 +345,20 @@ es:
       updated_msg: "¡Anuncio actualizado con éxito!"
     collections:
       accounts: Cuentas
+      back_to_account: Volver a la página de la cuenta
+      back_to_report: Volver a la página del informe
+      batch:
+        add_to_report: 'Añadir al informe #%{id}'
+        remove_from_report: Quitar del informe
+        report: Informar
       collection_title: Colección de %{name}
       contents: Contenidos
+      no_collection_selected: No se ha cambiado ninguna colección, ya que no se ha seleccionado ninguna
       number_of_accounts:
         one: 1 cuenta
         other: "%{count} cuentas"
       open: Abrir
+      title: Colecciones de la cuenta - @%{name}
       view_publicly: Ver públicamente
     critical_update_pending: Actualización crítica pendiente
     custom_emojis:
@@ -510,7 +518,7 @@ es:
           action: Administrar
           hint: Texto opcional que aparece únicamente en el pie de los correos electrónicos del boletín de noticias
           title: Texto de pie de página adicional
-        lead: Los boletines de correo electrónico pueden considerarse correos electrónicos de marketing, dependiendo de las jurisdicciones en las que operas.
+        lead: Los boletines de correo electrónico podrían considerarse correos electrónicos de marketing, dependiendo de las jurisdicciones en las que operes.
         privacy_policy:
           action: Administrar
           hint: Esta política está enlazada en el pie de cada correo electrónico
@@ -1292,7 +1300,7 @@ es:
     animations_and_accessibility: Animaciones y accesibilidad
     boosting_preferences: Preferencias de impulso
     boosting_preferences_info_html: "<strong>Consejo:</strong> Sin importar los ajustes, pulsar <kbd>Mayus</kbd> al hacer <kbd>clic</kbd> en el icono de %{icon} Impulsar, dará impulso inmediatamente."
-    discovery: Descubrir
+    discovery: Descubrimiento
     localization:
       body: Mastodon es traducido con la ayuda de voluntarios.
       guide_link: https://es.crowdin.com/project/mastodon
