@@ -32,11 +32,12 @@ import { Popover } from '@/mastodon/components/popover';
 import { useToggle } from '@/mastodon/hooks/useToggle';
 import { useAppDispatch, useAppSelector } from '@/mastodon/store';
 
-import { selectComposePrivacy } from './selectors';
+import { selectComposeMentions, selectComposePrivacy } from './selectors';
 import classes from './styles.module.scss';
 
 export const ComposeVisibility: React.FC = () => {
   const privacy = useAppSelector(selectComposePrivacy);
+  const mentions = useAppSelector(selectComposeMentions);
   const [trigger, setTrigger] = useState<HTMLElement | null>(null);
   const [showMenu, { onToggle, onFalse }] = useToggle();
 
@@ -44,26 +45,29 @@ export const ComposeVisibility: React.FC = () => {
     <>
       <FormattedMessage
         id='compose.post.to'
-        defaultMessage='To: {button}'
-        values={{
-          button: (
-            <Button size='sm' onClick={onToggle} ref={setTrigger}>
-              {privacy !== 'private' && (
-                <FormattedMessage
-                  id='privacy.public.short'
-                  defaultMessage='Public'
-                />
-              )}
-              {privacy === 'private' && (
-                <FormattedMessage
-                  id='privacy.private.short'
-                  defaultMessage='Followers'
-                />
-              )}
-            </Button>
-          ),
-        }}
+        defaultMessage='To:'
+        description='Before button that indicates who a post is for (Public, Followers, mentioned people)'
       />
+
+      <Button
+        size='sm'
+        onClick={onToggle}
+        ref={setTrigger}
+        aria-expanded={showMenu}
+      >
+        {privacy !== 'private' && (
+          <FormattedMessage id='privacy.public.short' defaultMessage='Public' />
+        )}
+        {privacy === 'private' && (
+          <FormattedMessage
+            id='compose.post.privacy.followers'
+            defaultMessage='Followers {count, plural, =0 {} one {+ # other} other {+ # others}}'
+            description='Count is # of other people mentioned in the post. If zero, just output "Followers".'
+            values={{ count: mentions.size }}
+          />
+        )}
+      </Button>
+
       <Popover
         isOpen={showMenu}
         onClose={onFalse}
@@ -266,16 +270,17 @@ const DropdownRadioCheckField: React.FC<
   > & {
     children: React.ReactNode;
   }
-> = ({ children, onClick, ...props }) => {
+> = ({ children, onClick, disabled, ...props }) => {
   const { ref, onWrapperClick } = useDropdownControl();
 
   return (
-    <DropdownItem onClick={onWrapperClick}>
+    <DropdownItem onClick={onWrapperClick} disabled={disabled}>
       <RadioButtonField
         {...props}
         ref={ref}
         label={children}
         icon={CheckIcon}
+        disabled={disabled}
         wrapperClassName={classes.dropdownItemControl}
       />
     </DropdownItem>
@@ -287,14 +292,19 @@ const DropdownToggleField: React.FC<
     children: React.ReactNode;
     icon?: IconProp;
   }
-> = ({ children, icon, ...props }) => {
+> = ({ children, icon, disabled, ...props }) => {
   const { ref, onWrapperClick } = useDropdownControl();
 
   return (
-    <DropdownItem onClick={onWrapperClick} leadingIcon={icon}>
+    <DropdownItem
+      onClick={onWrapperClick}
+      leadingIcon={icon}
+      disabled={disabled}
+    >
       <ToggleField
         size='sm'
         {...props}
+        disabled={disabled}
         ref={ref}
         label={children}
         wrapperClassName={classes.dropdownItemControl}

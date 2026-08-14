@@ -55,6 +55,7 @@ export const ComposeEmojiButton: React.FC<{ onPick: OnEmojiPick }> = ({
         icon={SmileyIcon}
         ref={setTarget}
         onClick={onToggle}
+        aria-expanded={open}
       >
         <FormattedMessage
           id='emoji_button.label'
@@ -66,7 +67,7 @@ export const ComposeEmojiButton: React.FC<{ onPick: OnEmojiPick }> = ({
         isOpen={open}
         onClose={onFalse}
         reference={target}
-        placement='bottom'
+        placement='top-start'
         offset={4}
       >
         {({ props, placement }) => (
