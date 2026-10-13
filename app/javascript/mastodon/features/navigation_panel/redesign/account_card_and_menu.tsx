@@ -16,6 +16,8 @@ import {
   SignOutIcon,
   MastodonLogoIcon,
   GithubLogoIcon,
+  BellSlashIcon,
+  HandWavingIcon,
 } from '@phosphor-icons/react';
 
 import { openModal } from '@/mastodon/actions/modal';
@@ -69,14 +71,18 @@ export const NavigationAccountCardAndMenu: React.FC = () => {
               defaultMessage='Account settings'
             />
           </MenuTrigger>
-          <MenuList placement='top' offset={12} strategy='fixed'>
+          <MenuList placement='top' offset={12} strategy='fixed' minWidth={220}>
             <AccountMenuItems />
           </MenuList>
         </Menu>
       }
       className={classes.root}
     >
-      <LockupLink to={accountBasePath} subtitle={handle}>
+      <LockupLink
+        to={accountBasePath}
+        subtitle={handle}
+        className={classes.accountLink}
+      >
         <DisplayName variant='simple' account={account} />
       </LockupLink>
     </LockupWrapper>
@@ -148,19 +154,39 @@ export const AccountMenuItems: React.FC<{
 
       <MenuItemDivider />
 
-      <MenuItemLink as='a' href='/relationships' icon={UsersThreeIcon}>
-        <FormattedMessage
-          id='navigation_bar.followers_and_following'
-          defaultMessage='Followers & Following'
-        />
-      </MenuItemLink>
+      <MenuItemGroup
+        label={
+          <FormattedMessage
+            id='navigation_bar.relationships'
+            defaultMessage='Relationships'
+          />
+        }
+      >
+        <MenuItemLink to={`${accountBasePath}/followers`} icon={HandWavingIcon}>
+          <FormattedMessage
+            id='navigation_bar.followers'
+            defaultMessage='Followers'
+          />
+        </MenuItemLink>
 
-      <MenuItemLink to='/blocks' icon={ProhibitIcon}>
-        <FormattedMessage
-          id='navigation_bar.blocked_accounts'
-          defaultMessage='Blocked accounts'
-        />
-      </MenuItemLink>
+        <MenuItemLink to={`${accountBasePath}/following`} icon={UsersThreeIcon}>
+          <FormattedMessage
+            id='navigation_bar.following'
+            defaultMessage='Following'
+          />
+        </MenuItemLink>
+
+        <MenuItemLink to='/mutes' icon={BellSlashIcon}>
+          <FormattedMessage id='navigation_bar.muted' defaultMessage='Muted' />
+        </MenuItemLink>
+
+        <MenuItemLink to='/blocks' icon={ProhibitIcon}>
+          <FormattedMessage
+            id='navigation_bar.blocked'
+            defaultMessage='Blocked'
+          />
+        </MenuItemLink>
+      </MenuItemGroup>
 
       {(isManager || isAdmin) && (
         <>
@@ -196,7 +222,11 @@ export const AccountMenuItems: React.FC<{
           />
         </MenuItemLink>
 
-        <MenuItemLink as='a' href='/blocks' icon={MastodonLogoIcon}>
+        <MenuItemLink
+          as='a'
+          href='https://joinmastodon.org'
+          icon={MastodonLogoIcon}
+        >
           <FormattedMessage
             id='navigation_bar.about_mastodon'
             defaultMessage='About Mastodon'

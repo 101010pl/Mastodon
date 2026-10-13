@@ -18,7 +18,6 @@ import type { OnSuggestionSelect } from '@/mastodon/components/autosuggest/hooks
 import { useAutosuggestFloatingMenu } from '@/mastodon/components/autosuggest/hooks';
 import { AutosuggestMenu } from '@/mastodon/components/autosuggest/list';
 import { TextArea } from '@/mastodon/components/form_fields';
-import { normalizeKey } from '@/mastodon/components/hotkeys/utils';
 import { useScrollSensor } from '@/mastodon/hooks/useScrollSensor';
 import {
   clearComposerErrors,
@@ -56,7 +55,7 @@ type ComposeTextareaProps = Omit<
   | 'onDrop'
   | 'onChange'
   | 'onKeyDown'
-> & { onSubmit: () => void };
+> & { beforeTextArea?: React.ReactNode };
 
 const selectComposeTextState = createAppSelector(
   [(state) => state.compose],
@@ -68,10 +67,10 @@ const selectComposeTextState = createAppSelector(
 );
 
 export const ComposeTextarea: React.FC<ComposeTextareaProps> = ({
-  onSubmit,
   className,
   disabled,
   children,
+  beforeTextArea,
   ...props
 }) => {
   const intl = useIntl();
@@ -123,7 +122,6 @@ export const ComposeTextarea: React.FC<ComposeTextareaProps> = ({
 
   const {
     onTextChange,
-    focus,
     mirror,
     sourceProps: fullSourceProps,
     suggestProps,
@@ -149,31 +147,6 @@ export const ComposeTextarea: React.FC<ComposeTextareaProps> = ({
     [dispatch, onTextChange],
   );
 
-  const onKeyDown: React.KeyboardEventHandler<HTMLTextAreaElement> =
-    useCallback(
-      (event) => {
-        const key = normalizeKey(event.key);
-
-        if (key === 'enter' && (event.ctrlKey || event.metaKey)) {
-          onSubmit();
-          event.preventDefault();
-          onSuggestionClear();
-        } else if (key === 'escape') {
-          event.preventDefault();
-          // Dismiss the suggestions if we're displaying any.
-          if (suggestions.length > 0) {
-            onSuggestionClear();
-          } else {
-            // Otherwise lose focus on the textarea.
-            event.currentTarget.blur();
-          }
-        } else if (key === 'down') {
-          focus(event);
-        }
-      },
-      [onSubmit, onSuggestionClear, suggestions.length, focus],
-    );
-
   const onPasteOrDrop = useCallback(
     (event: React.ClipboardEvent | React.DragEvent) => {
       const data =
@@ -197,6 +170,8 @@ export const ComposeTextarea: React.FC<ComposeTextareaProps> = ({
       data-scroll-down={!isInViewport}
       onScrollCapture={onScroll} // Requires capture so it fires before TextArea.
     >
+      {beforeTextArea}
+
       <TextArea
         {...props}
         dir='auto'
@@ -212,7 +187,6 @@ export const ComposeTextarea: React.FC<ComposeTextareaProps> = ({
             : messages.placeholder,
         )}
         disabled={disabled || isSubmitting}
-        onKeyDown={onKeyDown}
         onDrop={onPasteOrDrop}
         onPaste={onPasteOrDrop}
         onChange={onChange}

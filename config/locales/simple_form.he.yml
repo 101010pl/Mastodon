@@ -63,6 +63,7 @@ he:
         setting_default_quote_policy_private: הודעות לעוקבים־בלבד שנוצרו במסטודון חסומות מציטוט על ידי אחרים.
         setting_default_quote_policy_unlisted: כאשר אחרים מצטטים אותך, ההודעות שלהם יוסתרו גם מ"נושאים חמים".
         setting_default_sensitive: מדיה רגישה מוסתרת כברירת מחדל וניתן להציגה בקליק
+        setting_default_spoiler_field: שמירה על שדה אזהרת התוכן פתוח בתוך העורך. ניתן להתאים אישית את המלל בכל פרסום.
         setting_display_media_default: הצג אזהרה בטרם הצגת מדיה המסווגת כרגישה
         setting_display_media_hide_all: הזהר בטרם הצגת מדיה כלשהי
         setting_display_media_show_all: הצג את כל תכני המדיה ללא אזהרה, גם אם סומנו כרגישים
@@ -253,6 +254,7 @@ he:
         setting_default_privacy: חשיפת ההודעה
         setting_default_quote_policy: למי מותר לצטט
         setting_default_sensitive: תמיד לתת סימון "רגיש" למדיה
+        setting_default_spoiler_field: להשתמש באזהרות תוכן כברירת מחדל
         setting_delete_modal: הזהר אותי לפני שאמחק הודעה
         setting_disable_hover_cards: כבה הצצה מקדימה לפרופיל בעת מעבר עכבר מעליו
         setting_disable_swiping: ביטול החלקת-צד
@@ -260,6 +262,8 @@ he:
         setting_display_media_default: ברירת מחדל
         setting_display_media_hide_all: להסתיר הכל
         setting_display_media_show_all: להציג הכול
+        setting_display_own_boosts: הצג לי את ההידהודים שלי בפיד הראשי שלי
+        setting_display_own_posts: הצג לי את הפירסומים שלי בפיד הראשי שלי
         setting_emoji_style: סגנון רגישונים (אמוג'י)
         setting_expand_spoilers: להרחיב תמיד הודעות מסומנות באזהרת תוכן
         setting_hide_network: להחביא את הגרף החברתי שלך
@@ -276,6 +280,7 @@ he:
         setting_use_pending_items: מצב איטי
         severity: חומרה
         sign_in_token_attempt: קוד אבטחה
+        sign_in_token_resend: שליחה מחדש של קוד האבטחה
         title: כותרת
         type: סוג יבוא
         username: שם משתמש

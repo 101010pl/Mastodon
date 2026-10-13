@@ -1,10 +1,17 @@
-import { lazy, Suspense, useCallback, useRef, useState } from 'react';
+import {
+  lazy,
+  Suspense,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import { FormattedMessage } from 'react-intl';
 
 import classNames from 'classnames';
 
-import { WarningIcon } from '@phosphor-icons/react';
+import { fromJS } from 'immutable';
 
 import { openModal } from '@/mastodon/actions/modal';
 import type { DeployPictureInPictureCallback } from '@/mastodon/actions/picture_in_picture';
@@ -13,6 +20,7 @@ import { CollectionPreviewCard } from '@/mastodon/features/collections/component
 import MediaCard from '@/mastodon/features/status/components/card';
 import { useAccount } from '@/mastodon/hooks/useAccount';
 import { useExpandedStatus } from '@/mastodon/hooks/useStatus';
+import { useToggle } from '@/mastodon/hooks/useToggle';
 import { displayMedia } from '@/mastodon/initial_state';
 import type {
   CardShape,
@@ -28,8 +36,8 @@ import { compareUrls } from '@/mastodon/utils/compare_urls';
 import { decodeIDNA } from '@/mastodon/utils/links';
 
 import { Avatar } from '../avatar';
+import { Blurhash } from '../blurhash';
 import { Button } from '../button/redesign';
-import { Callout } from '../callout/redesign';
 import { Card, CardActions, CardBody, CardTitle } from '../card';
 import { DisplayName } from '../display_name';
 import { RelativeTimestamp } from '../relative_timestamp';
@@ -55,7 +63,8 @@ export const StatusAttachments: React.FC<{
       <MediaAttachments
         statusId={statusId}
         accountId={status.account.id}
-        sensitive={status.sensitive && !status.spoiler_text}
+        statusHidden={status.hidden && !!status.spoiler_text}
+        sensitive={status.sensitive}
         language={status.translation?.language ?? status.language}
         attachment={attachment}
         restAttachments={status.media_attachments.slice(1)}
@@ -116,6 +125,7 @@ const Video = lazy(() => import('@/mastodon/features/video'));
 const MediaAttachments: React.FC<{
   statusId: string;
   accountId: string;
+  statusHidden: boolean;
   sensitive: boolean;
   language: string;
   attachment: MediaAttachmentShape;
@@ -124,10 +134,12 @@ const MediaAttachments: React.FC<{
 }> = ({
   statusId,
   accountId,
+  statusHidden,
   sensitive,
   language,
   attachment,
   defaultPosterUrl,
+  restAttachments,
 }) => {
   const description =
     attachment.translation?.description ?? attachment.description;
@@ -138,7 +150,7 @@ const MediaAttachments: React.FC<{
       'media_attachments',
     ]) as Immutable.List<MediaAttachment>;
   });
-  const { contextType } = useStatusContext();
+  const { contextType, registerHotkeyCallback } = useStatusContext();
   const mediaFilters = useAppSelector((state) =>
     selectMediaFilters(state, { statusId, contextType }),
   );
@@ -164,6 +176,10 @@ const MediaAttachments: React.FC<{
       return !prev;
     });
   }, []);
+
+  useEffect(() => {
+    registerHotkeyCallback?.('toggleSensitive', handleToggleMediaVisibility);
+  }, [handleToggleMediaVisibility, registerHotkeyCallback]);
 
   const dispatch = useAppDispatch();
   const handleOpenMedia: OnOpenMediaCallback = useCallback(
@@ -194,7 +210,7 @@ const MediaAttachments: React.FC<{
           modalProps: {
             statusId,
             options,
-            media: attachment,
+            media: fromJS(attachment),
             lang: language,
           },
         }),
@@ -222,7 +238,8 @@ const MediaAttachments: React.FC<{
 
   let aspectRatio = '3 / 2';
   if (
-    isMediaAttachmentOfType(attachment, 'image') ||
+    (isMediaAttachmentOfType(attachment, 'image') &&
+      restAttachments.length === 0) ||
     isMediaAttachmentOfType(attachment, 'video') ||
     isMediaAttachmentOfType(attachment, 'gifv')
   ) {
@@ -236,8 +253,8 @@ const MediaAttachments: React.FC<{
   }
 
   const wrapperProps = {
-    sensitive,
     visible: showMedia,
+    statusHidden,
     onToggle: handleToggleMediaVisibility,
     aspectRatio,
     mediaFilters,
@@ -263,6 +280,7 @@ const MediaAttachments: React.FC<{
           deployPictureInPicture={handleDeployPictureInPicture}
           blurhash={attachment.blurhash}
           onToggleVisibility={handleToggleMediaVisibility}
+          visible={showMedia}
         />
       </MediaAttachmentWrapper>
     );
@@ -283,98 +301,80 @@ const MediaAttachments: React.FC<{
           onOpenVideo={handleOpenVideo}
           deployPictureInPicture={handleDeployPictureInPicture}
           onToggleVisibility={handleToggleMediaVisibility}
+          visible={showMedia}
         />
       </MediaAttachmentWrapper>
     );
   }
 
   return (
-    <MediaAttachmentWrapper {...wrapperProps} type='media'>
+    <MediaAttachmentWrapper {...wrapperProps} type='gallery'>
       <MediaGallery
         media={immutableAttachments}
         lang={language}
         height={110}
         onOpenMedia={handleOpenMedia}
         onToggleVisibility={handleToggleMediaVisibility}
+        visible={showMedia}
       />
     </MediaAttachmentWrapper>
   );
 };
 
 const MediaAttachmentWrapper: React.FC<{
-  sensitive: boolean;
   visible: boolean;
+  statusHidden: boolean;
   onToggle: () => void;
-  type?: 'media' | 'video' | 'audio';
+  type?: 'gallery' | 'video' | 'audio';
   children: React.ReactNode;
   aspectRatio: string;
   mediaFilters: string[];
   wrapperRef: React.RefObject<HTMLDivElement | null>;
 }> = ({
-  sensitive,
   visible,
-  type = 'media',
+  statusHidden,
+  type = 'gallery',
   onToggle,
   children,
   aspectRatio,
   mediaFilters,
   wrapperRef,
 }) => {
-  let message = (
-    <FormattedMessage id='status.media_hidden' defaultMessage='Media hidden' />
-  );
-  if (sensitive) {
-    message = (
-      <FormattedMessage
-        id='status.sensitive_warning'
-        defaultMessage='Sensitive content'
-      />
-    );
-  } else if (mediaFilters.length > 0) {
-    message = (
-      <FormattedMessage
-        id='filter_warning.matches_filter'
-        defaultMessage='Matches filter “<span>{title}</span>”'
-        values={{
-          title: mediaFilters.join(', '),
-          span: (chunks) => <span className='filter-name'>{chunks}</span>,
-        }}
-      />
-    );
-  }
-
-  const showSpoiler = sensitive || mediaFilters.length > 0 || !visible;
-
   return (
-    <div className={classes.galleryWrapper} ref={wrapperRef}>
-      {showSpoiler && (
-        <Callout
-          className={classes.gallerySpoilerWrapper}
-          icon={WarningIcon}
-          actionClick={onToggle}
-          actionText={
-            visible ? (
-              <FormattedMessage
-                id='content_warning.media.hide_short'
-                defaultMessage='Hide media'
-              />
-            ) : (
-              <FormattedMessage
-                id='content_warning.media.show_short'
-                defaultMessage='Show media'
-              />
-            )
-          }
-        >
-          {message}
-        </Callout>
+    <div
+      ref={wrapperRef}
+      data-color-scheme='dark'
+      className={classes.galleryWrapper}
+    >
+      {!visible && !statusHidden && (
+        <div className={classes.gallerySpoiler}>
+          {mediaFilters.length > 0 && (
+            <FormattedMessage
+              id='filter_warning.matches_filter'
+              defaultMessage='Matches filter “<span>{title}</span>”'
+              tagName='p'
+              values={{
+                title: mediaFilters.join(', '),
+                span: (chunks) => <span>{chunks}</span>,
+              }}
+            />
+          )}
+          <Button size='sm' variant='solid' onClick={onToggle}>
+            <FormattedMessage
+              id='content_warning.media.show_short'
+              defaultMessage='Show media'
+            />
+          </Button>
+        </div>
       )}
       <div
-        data-color-scheme='dark'
         className={classNames(
           mainClasses.contentWrapper,
+          classes.galleryContent,
           !visible && mainClasses.hasContentWarning,
           !visible && classes.galleryHideButtons,
+          !visible && classes.galleryHideActions,
+          mediaFilters.length > 0 && classes.galleryFilterBlur,
         )}
       >
         <Suspense
@@ -418,7 +418,7 @@ const LinkCard: React.FC<{ card: CardShape; status: ExpandedStatusShape }> = ({
     .filter((id): id is string => !!id);
 
   return (
-    <Card>
+    <Card image={card.image && <LinkCardImage card={card} />}>
       <CardTitle
         afterContent={
           card.published_at && (
@@ -461,6 +461,20 @@ const LinkCard: React.FC<{ card: CardShape; status: ExpandedStatusShape }> = ({
         </CardActions>
       )}
     </Card>
+  );
+};
+
+const LinkCardImage: React.FC<{ card: CardShape }> = ({ card }) => {
+  const [loaded, { onTrue: onLoad }] = useToggle();
+  if (!card.image) {
+    return null;
+  }
+
+  return (
+    <>
+      <img src={card.image} alt={card.image_description} onLoad={onLoad} />
+      {!loaded && card.blurhash && <Blurhash hash={card.blurhash} />}
+    </>
   );
 };
 
