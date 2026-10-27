@@ -10,7 +10,7 @@
   // }
 
   :global(.layout-multiple-columns) & {
-    flex: auto;
+    flex: 0 0 auto;
 
     --available-width: calc(
       100% - var(--multi-column-navigation-width) - var(--multi-column-gap)
