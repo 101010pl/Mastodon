@@ -283,6 +283,7 @@ be:
         update_ip_block: Абнавіць IP правіла
         update_report: Абнавіць скаргу
         update_status: Абнавіць допіс
+        update_tag: Абнавіць хэштэг
         update_user_role: Абнавіць ролю
         update_username_block: Абнавіць правіла імя карыстальніка
       actions:
@@ -2512,7 +2513,7 @@ be:
     development: Распрацоўка
     edit_profile: Рэдагаваць профіль
     export: Экспарт
-    featured_tags: Выбраныя хэштэгі
+    featured_tags: Рэкамендаваныя хэштэгі
     import: Імпарт
     import_and_export: Імпарт і экспарт
     migrate: Перамяшчэнне ўліковага запісу

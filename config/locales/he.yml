@@ -279,6 +279,7 @@ he:
         update_ip_block: עדכון כלל IP
         update_report: עדכון דו"ח עבירה
         update_status: סטטוס עדכון
+        update_tag: עדכן תגית
         update_user_role: עדכון תפקיד
         update_username_block: עדכון חוק שמות משתמש
       actions:
@@ -2308,6 +2309,8 @@ he:
           trillion: טריליון
   otp_authentication:
     code_hint: על מנת לאשר, נא להכניס את הקוד שיוצר על ידי יישום האימות שלך
+    delete: מחק
+    delete_confirmation: האם את.ה בטוח.ה שברצונך למחוק את אפליקציית המאמת שלך משיטות האימות הדו-גורמי שלך?
     description_html: אם אופשר <strong>אימות דו-גורמי</strong> בעזרת אפליקציית אימות, כניסה לאתר תדרוש שימוש בטלפון ליצירת אסימוני כניסה עבורך.
     enable: לאפשר
     instructions_html: "<strong>נא לסרוק את קוד ה-QR בעזרת Google Authenticator או יישום TOTP דומה בטלפונך</strong>. מעתה ואילך, יישום זה ייצר אסימונים שיש להזין בזמן הכניסה לאתר."
